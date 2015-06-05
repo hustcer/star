@@ -165,7 +165,7 @@ let getFilteredSymbols = function(symbols){
     // 股票代码过滤排除项
     if(cmd.exclude){ symbols = _.filter(symbols, s => {
         let exclude = false;
-        let prefixs = cmd.exclude.replace(/，/, ',').split(',');
+        let prefixs = cmd.exclude.replace(/，/g, ',').split(',');
         _.each(prefixs, pre => {
                 if(s.code.startsWith(pre)){
                     exclude = true;
@@ -177,7 +177,7 @@ let getFilteredSymbols = function(symbols){
     // 股票代码过滤包含项
     if(cmd.contain){symbols = _.filter(symbols, s => {
         let contain = false;
-        let prefixs = cmd.contain.replace(/，/, ',').split(',');
+        let prefixs = cmd.contain.replace(/，/g, ',').split(',');
         _.each(prefixs, pre => {
                 if(s.code.startsWith(pre)){
                     contain = true;
@@ -189,7 +189,7 @@ let getFilteredSymbols = function(symbols){
     // 备注字段关键词过滤
     if(cmd.grep){symbols = _.filter(symbols, s => {
         let find = false;
-        let kws  = cmd.grep.replace(/，/, ',').split(',');
+        let kws  = cmd.grep.replace(/，/g, ',').split(',');
         _.each(kws, kw => {
             let reg = new RegExp(kw, 'i');
             if(reg.test(s.comment) || reg.test(s.name)){
