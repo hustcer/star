@@ -1,0 +1,42 @@
+{
+  "name": "star",
+  "author": "hustcer",
+  "private": true,
+  "version": "0.1.2",
+  "license": "MIT",
+  "homepage": "http://traceinvest.com",
+  "description": "star",
+  "contributors": [
+    {
+      "name": "Justin Ma",
+      "email": "hustcer(at)gmail.com"
+    }
+  ],
+  "scripts": {
+    "start": "node star.js"
+  },
+  "engines": {
+    "node": ">= 0.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/hustcer/star"
+  },
+  "keywords": [
+    "nodejs", "stocks"
+  ],
+  "dependencies": {
+    "bluebird": "~2.9.26",
+    "colors": "~1.1.0",
+    "commander": "~2.8.1",
+    "iconv": "^2.1.7",
+    "js-yaml": "~3.3.0",
+    "lodash": "~3.9.3",
+    "printf": "~0.2.0",
+    "request": "2.55.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-eslint": "^13.0.0"
+  }
+}
