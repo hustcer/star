@@ -65,5 +65,10 @@ symbols:
     comment   : '计算机;信息安全;腾讯合作;分析师推荐'
 ```
 
+## 运行截图
 
+1. 帮助文档
+![](https://github.com/hustcer/star/blob/master/snapshot/help.png)
 
+2. 股票筛选结果
+![](https://github.com/hustcer/star/blob/master/snapshot/snapshot.png)
