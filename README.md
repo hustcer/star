@@ -1,7 +1,7 @@
 
 ## `Star`是什么?
 
-`Star`是 STock Analysis and Research tool 的简称，主要用于股票追踪分析。`star`目前的主要作用是根据您所设定的股票目标价及当前价计算出相对该**目标价**的上涨空间，即`(目标价-当前价)/当前价x100%`，然后将此上涨空间按顺序排列方便您从中找到上涨空间最大的股票作为买入参考。`star`不提供股价预测和股票交易服务，目前只是单纯的计算，所以它的价值很大程度上取决于您所设定的目标价的有效性，目标价可以选择近期股票的最高价格或者分析师给出的价格，在大牛市里面这样的目标价还是比较容易达到的。`star`未来可能会加入更多功能，同时也欢迎大家[反馈建议](https://github.com/hustcer/star/issues/new)。
+`Star`是 STock Analysis and Research tool 的简称，主要用于A股股票追踪分析。`star`目前的主要作用是根据您所设定的股票目标价及当前价计算出相对该**目标价**的上涨空间，即`(目标价-当前价)/当前价x100%`，然后将此上涨空间按顺序排列方便您从中找到上涨空间最大的股票作为买入参考。`star`不提供股价预测和股票交易服务，目前只是单纯的计算，所以它的价值很大程度上取决于您所设定的目标价的有效性，目标价可以选择近期股票的最高价格或者分析师给出的价格，在大牛市里面这样的目标价还是比较容易达到的。`star`未来可能会加入更多功能，同时也欢迎大家[反馈建议](https://github.com/hustcer/star/issues/new)。
 
 
 ## Donating
@@ -21,7 +21,7 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 1. 安装 [node.js](https://nodejs.org/), version >= 0.12;
 1. 您还需要安装 `git`, 之后 clone `star`源码：`git clone git@github.com:hustcer/star.git`;
 1. 在`star`目录下安装依赖的 `node` 模块: `sudo npm install`;
-1. 运行`star`: `./star.js`，第一次运行的时候需要加`-f`或`--file`参数指定股票数据文件，之后可以省略该参数;
+1. 运行`star`: `./star.js`，第一次运行的时候需要加`-f`或`--file`参数指定股票数据文件(推荐采用绝对路径)，之后可以省略该参数;
 1. 更多帮助可以参考: `./star.js --help`;
 
 ## 具体功能列表
