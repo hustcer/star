@@ -29,7 +29,7 @@
 <<<<<<< HEAD
 ## 股票数据文件说明
 
-`Star`的运行需要一个股票数据文件，如果未指定股票数据文件默认情况下会使用当前目录下的 `[symbols.yaml](https://github.com/hustcer/star/blob/master/symbols.yaml)` 文件，该文件采用`yaml`语法编写。一个典型的股票数据文件格式说明如下：
+`Star`的运行需要一个股票数据文件，如果未指定股票数据文件默认情况下会使用当前目录下的 [`symbols.yaml`](https://github.com/hustcer/star/blob/master/symbols.yaml) 文件，该文件采用`yaml`语法编写，修改的时候尤其要注意缩进问题，否则可能会解析错误。一个典型的股票数据文件格式说明如下：
 
 ```yaml
 symbols:
@@ -42,7 +42,7 @@ symbols:
     star      : 3                   # <数字>股票评级，越高越值得购买，范围：1~5
     hold      : false               # <true/false> true 表示当前持有该股票,反之不持有
     watch     : true                # <true/false>是否关注此股票，如果 true 则关注，否则忽略
-    comment   : '手游;高送转;自设PT'   # <字符串>行业/概念/题材等备注,后期可用于搜索过滤
+    comment   : '手游;高送转;自设目标'  # <字符串>行业/概念/题材等备注,后期可用于搜索过滤
   -
     name      : '启明星辰'
     code      : '002439'
@@ -52,7 +52,7 @@ symbols:
     star      : 3
     hold      : false
     watch     : true
-    comment   : '计算机;信息安全;腾讯合作;分荐'
+    comment   : '计算机;信息安全;腾讯合作;分析师推荐'
 ```
 
 ## ToDo:
