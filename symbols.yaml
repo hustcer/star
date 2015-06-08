@@ -1,0 +1,114 @@
+# Yaml 文件格式说明参见：http://yaml.org/
+# 需要追踪股票的数据文件，编辑的时候要注意文本缩进，保持队形，否则可能出错
+---
+  symbols:
+    -
+      name      : '掌趣科技'               # <字符串>公司名称
+      code      : '300315'                # <字符串>股票代码，必填，不可错
+      cheap     : 16                      # <数字>买点价位，在此价格附近买入有利可图
+      expensive : 22                      # <数字>卖点价位，在此价格附近可以卖出获利了结
+      target    : 23                      # <数字>目标价位
+      star      : 3                       # <数字>股票评级，越高越值得购买，范围：1~5
+      hold      : false                   # <true/false> true 表示当前持有该股票,反之不持有
+      watch     : true                    # <true/false>是否关注此股票，如果 true 则关注，否则忽略
+      comment   : '手游;高送转;自设PT'       # <字符串>行业/概念/题材等备注,后期可用于搜索过滤
+    -
+      name      : '东方国信'
+      code      : '300166'
+      cheap     : 35
+      expensive : 47
+      target    : 53
+      star      : 3
+      hold      : false
+      watch     : true
+      comment   : '计算机;智慧城市;分析师6MPT'
+    -
+      name      : '启明星辰'
+      code      : '002439'
+      cheap     : 50
+      expensive : 88
+      target    : 78
+      star      : 3
+      hold      : false
+      watch     : true
+      comment   : '计算机;信息安全;腾讯合作;分荐'
+    -
+      name      : '朗姿股份'
+      code      : '002612'
+      cheap     : 75
+      expensive : 110
+      target    : 120
+      star      : 5
+      hold      : false
+      watch     : true
+      comment   : '服装销售;泛时尚;互联网+;分荐'
+    -
+      name      : '鱼跃医疗'
+      code      : '002223'
+      cheap     : 48
+      expensive : 85
+      target    : 90
+      star      : 4
+      hold      : true
+      watch     : true
+      comment   : '医疗;互联网医疗;阿里合作;分析师12MPT'
+    -
+      name      : '超图软件'
+      code      : '300036'
+      cheap     : 40
+      expensive : 63
+      target    : 68
+      star      : 2
+      hold      : false
+      watch     : true
+      comment   : '计算机;GIS;军工;不动产登记;分荐'
+    -
+      name      : '苏宁云商'
+      code      : '002024'
+      cheap     : 16
+      expensive : 23
+      target    : 26
+      star      : 3
+      hold      : false
+      watch     : true
+      comment   : '电商;消费金融;分荐'
+    -
+      name      : '保利地产'
+      code      : '600048'
+      cheap     : 9.5
+      expensive : 16
+      target    : 18
+      star      : 3
+      hold      : false
+      watch     : true
+      comment   : '房地产;分荐'
+    -
+      name      : '同方国芯'
+      code      : '002049'
+      cheap     : 45
+      expensive : 70
+      target    : 75
+      star      : 2
+      hold      : false
+      watch     : true
+      comment   : '电子;金融IC卡;军工智能化;分析师6MPT'
+    -
+      name      : '东华软件'
+      code      : '002065'
+      cheap     : 39
+      expensive : 63
+      target    : 65.69
+      star      : 2
+      hold      : true
+      watch     : true
+      comment   : '计算机;智慧医疗;分析师6MPT'
+    -
+      name      : '卫宁软件'
+      code      : '300253'
+      cheap     : 65
+      expensive : 88
+      target    : 91
+      star      : 2
+      hold      : false
+      watch     : true
+      comment   : '计算机;智慧医疗;分荐'
