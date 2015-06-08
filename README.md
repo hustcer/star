@@ -26,6 +26,7 @@
 - 可以通过`-g`或`--grep`参数对股票列表里的股票名、备注字段进行搜索、过滤，多个关键词之间以','或者'，'分隔；
 - 还有更多功能正在酝酿之中，同时也欢迎大家广泛提建议；
 
+<<<<<<< HEAD
 ## 股票数据文件说明
 
 `Star`的运行需要一个股票数据文件，如果未指定股票数据文件默认情况下会使用当前目录下的 `[symbols.yaml](https://github.com/hustcer/star/blob/master/symbols.yaml)` 文件，该文件采用`yaml`语法编写。一个典型的股票数据文件格式说明如下：
@@ -89,4 +90,5 @@ symbols:
 - Generate stock recommand list
 - Query single symbol
 - Calc buy point and sell point
+
 
