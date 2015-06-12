@@ -29,14 +29,14 @@
     "bluebird": "~2.9.26",
     "colors": "~1.1.0",
     "commander": "~2.8.1",
-    "iconv": "^2.1.7",
+    "iconv": "^2.1.8",
     "js-yaml": "~3.3.0",
     "lodash": "~3.9.3",
-    "printf": "~0.2.0",
-    "request": "2.55.0"
+    "printf": "~0.2.3",
+    "request": "2.57.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-eslint": "^13.0.0"
+    "grunt-eslint": "^14.0.0"
   }
 }

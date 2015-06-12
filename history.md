@@ -43,3 +43,5 @@
 - Add multiple grepping keywords support.
 - Add company name search support.
 - Params could be separated by both ',' and '，'.
+- Update node modules:iconv, printf, request and grunt-eslint.
+
