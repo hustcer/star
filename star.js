@@ -325,11 +325,12 @@ let printSummary = function(){
     let end     = new Date().getTime();
     // 计算当前页面数据的起始序号
     let fromIdx = Math.min(Math.ceil(results.length/conf.limit)-1, cmd.page||0)*conf.limit;
+    fromIdx = fromIdx >= 0 ? fromIdx: 0;
 
     console.log('\n', ' '.repeat(135).underline.yellow);
 
     console.log(' '.repeat(35) + 'Done!'.header, '总计:', (totalSymbols + '').em,
-                '只股票, 当前显示第', (fromIdx + '-' + (fromIdx + page.length)).em, '只, 操作耗时:',
+                '只股票, 当前显示第', (fromIdx + '-' + (fromIdx + (page||[]).length)).em, '只, 操作耗时:',
                 ((end - start) + ' ms').em, ' '.repeat(18),'By TraceInvest.com\n' );
 };
 
