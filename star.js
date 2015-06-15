@@ -155,19 +155,19 @@ let getSymbolFilePath = function(){
 
 /**
  * 根据条件过滤股票
- * @param  {Array} symbols  Symbol list
+ * @param  {Array} syms     Symbol list
  * @return {Array}          Filtered symbol list
  */
-let getFilteredSymbols = function(symbols){
+let getFilteredSymbols = function(syms){
 
     // 如果显示所有股票则不过滤掉 watch=false 的股票
-    if(!cmd.all && !cmd.ignore && !cmd.hold){ symbols = _.filter(symbols, s => s.watch);  }
+    if(!cmd.all && !cmd.ignore && !cmd.hold){ syms = _.filter(syms, s => s.watch);  }
     // 只显示所有 watch=false 的股票
-    if(cmd.ignore){ symbols = _.filter(symbols, s => !s.watch); }
+    if(cmd.ignore){ syms = _.filter(syms, s => !s.watch); }
     // 只显示所有 hold=true 的股票
-    if(cmd.hold){ symbols = _.filter(symbols, s => s.hold); }
+    if(cmd.hold){ syms = _.filter(syms, s => s.hold); }
     // 股票代码过滤排除项
-    if(cmd.exclude){ symbols = _.filter(symbols, s => {
+    if(cmd.exclude){ syms = _.filter(syms, s => {
         let exclude = false;
         let prefixs = cmd.exclude.replace(/，/g, ',').split(',');
         _.each(prefixs, pre => {
@@ -177,9 +177,9 @@ let getFilteredSymbols = function(symbols){
                 }
             });
         return !exclude;
-    })}
+    }); }
     // 股票代码过滤包含项
-    if(cmd.contain){symbols = _.filter(symbols, s => {
+    if(cmd.contain){syms = _.filter(syms, s => {
         let contain = false;
         let prefixs = cmd.contain.replace(/，/g, ',').split(',');
         _.each(prefixs, pre => {
@@ -189,9 +189,9 @@ let getFilteredSymbols = function(symbols){
                 }
             });
         return contain;
-    })}
+    }); }
     // 备注字段关键词过滤
-    if(cmd.grep){symbols = _.filter(symbols, s => {
+    if(cmd.grep){syms = _.filter(syms, s => {
         let find = false;
         let kws  = cmd.grep.replace(/，/g, ',').split(',');
         _.each(kws, kw => {
@@ -200,15 +200,15 @@ let getFilteredSymbols = function(symbols){
                 find = true;
                 return false;
             }
-        })
+        });
         return find;
-    })}
+    }); }
 
     // 根据股票星级条件过滤股票代码
-    if(cmd.above||cmd.above === 0){symbols = _.filter(symbols, s => s.star >= cmd.above);}
-    if(cmd.under||cmd.under === 0){symbols = _.filter(symbols, s => s.star <= cmd.under);}
+    if(cmd.above||cmd.above === 0){syms = _.filter(syms, s => s.star >= cmd.above); }
+    if(cmd.under||cmd.under === 0){syms = _.filter(syms, s => s.star <= cmd.under); }
 
-    return symbols;
+    return syms;
 };
 
 let rawSyms = yaml.safeLoad(fs.readFileSync(getSymbolFilePath(), 'utf8')).symbols;
@@ -236,19 +236,19 @@ let ClientError = e => e.code >= 400 && e.code < 500;
 
 /**
  * Query symbols detail data
- * @param  {array} symbols   Symbols array
+ * @param  {array} syms     Symbols array
  * @return {Promise}         Bluebird promise object
  */
-let querySymbols = function(symbols){
+let querySymbols = function(syms){
 
-    let query = _.map(symbols, x => conf.market[x.code.substr(0,3)] + x.code).join(',');
+    let query = _.map(syms, x => conf.market[x.code.substr(0,3)] + x.code).join(',');
 
     return request.getAsync(ds.url + query, {encoding:null}).spread(function(resp, body) {
 
         vm.runInThisContext(iconv.convert(body).toString());
 
-        _.each(symbols, function(s){
-            let splits = eval(ds.flag + conf.market[s.code.substr(0,3)] + s.code).split(ds.sep);
+        _.each(syms, function(s){
+            let splits = vm.runInThisContext(ds.flag + conf.market[s.code.substr(0,3)] + s.code).split(ds.sep);
             // 对于停牌股票价格以上个交易日收盘价格为准
             s.close    = +splits[ds.closeIndex];
             s.price    = +splits[ds.priceIndex] || s.close;
@@ -258,7 +258,7 @@ let querySymbols = function(symbols){
             s.pe       = (ds.peIndex > -1)? +splits[ds.peIndex]: 0;
             s.pb       = (ds.pbIndex > -1)? +splits[ds.pbIndex]: 0;
         });
-        results = results.concat(symbols);
+        results = results.concat(syms);
 
     }).catch(ClientError, function(e) {
         console.error(e);
@@ -275,8 +275,8 @@ let printResults = function(){
     process.stdout.write("\u001b[2J\u001b[0;0H");
 
     // 根据上涨空间条件过滤股票代码
-    if(cmd.lte||cmd.lte === 0){results = _.filter(results, s => s.pct <= cmd.lte);}
-    if(cmd.gte||cmd.gte === 0){results = _.filter(results, s => s.pct >= cmd.gte);}
+    if(cmd.lte||cmd.lte === 0){results = _.filter(results, s => s.pct <= cmd.lte); }
+    if(cmd.gte||cmd.gte === 0){results = _.filter(results, s => s.pct >= cmd.gte); }
 
     let ascending = cmd.reverse ? 1:-1;
     // Sorting by sort field in descent order

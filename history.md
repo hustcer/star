@@ -50,4 +50,5 @@
 - Update bluebird to v2.9.30.
 - Add `-L, --lte`, `-G, --gte`, `-U, --under`, `-A, --above` support, check help for more details.
 - Fix page undefined bug.
+- Add eslint for js linting, and fix some lint problems.
 
