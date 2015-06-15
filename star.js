@@ -108,6 +108,10 @@ cmd
   .option('-p, --page  <n>'    , 'specify the page index to display.', parseInt)
   .option('-d, --data  <data>' , 'specify data provider, should be "sina" or "tencent".')
   .option('-f, --file  <file>' , 'specify symbol file path.')
+  .option('-L, --lte   <pct> ' , 'filter the symbols whose upside potential is lower than or equal to the specified percentage.', parseInt)
+  .option('-G, --gte   <pct> ' , 'filter the symbols whose upside potential is greater than or equal to the specified percentage.', parseInt)
+  .option('-U, --under <star>' , 'filter the symbols whose star is under or equal to the specified star value.', parseInt)
+  .option('-A, --above <star>' , 'filter the symbols whose star is above or equal to the specified star value.', parseInt)
   .option('-g, --grep  <kw>  ' , 'specify the keyword to grep in name or comment, multiple keywords should be separated by ",".')
   .option('-e, --exclude <pre>', 'exclude stocks whose code number begin with: 300,600,002 or 000, etc. multiple prefixs can be\n' + ' '.repeat(20) +
                                  ' used and should be separated by ",". ')
@@ -200,6 +204,10 @@ let getFilteredSymbols = function(symbols){
         return find;
     })}
 
+    // 根据股票星级条件过滤股票代码
+    if(cmd.above||cmd.above === 0){symbols = _.filter(symbols, s => s.star >= cmd.above);}
+    if(cmd.under||cmd.under === 0){symbols = _.filter(symbols, s => s.star <= cmd.under);}
+
     return symbols;
 };
 
@@ -207,7 +215,7 @@ let rawSyms = yaml.safeLoad(fs.readFileSync(getSymbolFilePath(), 'utf8')).symbol
 
 let symbols = getFilteredSymbols(rawSyms);
 
-const TOTAL_SYMBOLS = symbols.length;
+let totalSymbols = symbols.length;
 
 conf.limit = cmd.limit || conf.limit;
 
@@ -266,12 +274,19 @@ let printResults = function(){
     // console.log("\u001b[2J\u001b[0;0H");
     process.stdout.write("\u001b[2J\u001b[0;0H");
 
+    // 根据上涨空间条件过滤股票代码
+    if(cmd.lte||cmd.lte === 0){results = _.filter(results, s => s.pct <= cmd.lte);}
+    if(cmd.gte||cmd.gte === 0){results = _.filter(results, s => s.pct >= cmd.gte);}
+
     let ascending = cmd.reverse ? 1:-1;
     // Sorting by sort field in descent order
     results = _.sortBy(results, s => ascending*s[sort]);
 
+    totalSymbols = results.length;
+
     // Split stocks into chunks and display the page with index page
     if(!cmd.all){
+
         let chunks = _.chunk(results, conf.limit);
         if(!cmd.page || cmd.page < 0){
             page = chunks[0];
@@ -313,7 +328,7 @@ let printSummary = function(){
 
     console.log('\n', ' '.repeat(135).underline.yellow);
 
-    console.log(' '.repeat(35) + 'Done!'.header, '总计:', (TOTAL_SYMBOLS + '').em,
+    console.log(' '.repeat(35) + 'Done!'.header, '总计:', (totalSymbols + '').em,
                 '只股票, 当前显示第', (fromIdx + '-' + (fromIdx + page.length)).em, '只, 操作耗时:',
                 ((end - start) + ' ms').em, ' '.repeat(18),'By TraceInvest.com\n' );
 };

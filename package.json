@@ -2,7 +2,7 @@
   "name": "star",
   "author": "hustcer",
   "private": true,
-  "version": "0.1.2",
+  "version": "0.1.16",
   "license": "MIT",
   "homepage": "http://traceinvest.com",
   "description": "star",
@@ -26,7 +26,7 @@
     "nodejs", "stocks"
   ],
   "dependencies": {
-    "bluebird": "~2.9.26",
+    "bluebird": "~2.9.30",
     "colors": "~1.1.0",
     "commander": "~2.8.1",
     "iconv": "^2.1.8",

@@ -45,3 +45,8 @@
 - Params could be separated by both ',' and '，'.
 - Update node modules:iconv, printf, request and grunt-eslint.
 
+### v0.1.16
+
+- Update bluebird to v2.9.30.
+- Add `-L, --lte`, `-G, --gte`, `-U, --under`, `-A, --above` support, check help for more details.
+
