@@ -51,4 +51,5 @@
 - Add `-L, --lte`, `-G, --gte`, `-U, --under`, `-A, --above` support, check help for more details.
 - Fix page undefined bug.
 - Add eslint for js linting, and fix some lint problems.
+- Some code refactor.
 

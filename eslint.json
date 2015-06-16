@@ -16,7 +16,7 @@
         "key-spacing": 0,
         "dot-notation": 0,
         "comma-spacing": 0,
-        "no-unused-vars": 0,
+        "no-unused-vars": 1,
         "no-path-concat": 0,
         "space-infix-ops": 0,
         "no-multi-spaces": 0,
