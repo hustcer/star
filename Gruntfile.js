@@ -18,7 +18,7 @@ module.exports = function(grunt) {
           config: "eslint.json"
         },
         files: {
-          src: ['Gruntfile.js', 'star.js', 'src/lib/**/*.js', '!node_modules/**/*.js']
+          src: ['Gruntfile.js', 'star.js', 'conf.js', 'lib/**/*.js', '!node_modules/**/*.js']
         }
       }
     }
