@@ -13,8 +13,6 @@ let _       = require('lodash'),
     Promise = require('bluebird'),
     cmd     = require('commander');
 
-let Trace = require('./lib/trace.js').Trace;
-
 const pkg = require('./package.json');
 let conf  = require('./conf.js').conf;
 
@@ -61,6 +59,7 @@ cmd
 
 let action = function() {
 
+    let Trace   = require('./lib/trace.js').Trace;
     let symbols = Trace.getFilteredSymbols();
     let symList = _.chunk(symbols, conf.chunkSize);
 
