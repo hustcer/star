@@ -14,7 +14,7 @@ let _       = require('lodash'),
     cmd     = require('commander');
 
 const pkg = require('./package.json');
-let conf  = require('./conf.js').conf;
+let conf  = require('./lib/conf.js').conf;
 
 /**
  * Available colors are:
