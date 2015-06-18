@@ -59,6 +59,18 @@ cmd
 
 let action = function() {
 
+    if(cmd.args.length === 1 ){
+
+      let Query = require('./lib/query.js').Query;
+      Query.querySymbols(cmd.args[0]);
+      return false;
+
+    }else if (cmd.args.length > 1) {
+
+      console.error('Input error, please try again, or run "star -h" for more help.');
+      return false;
+    };
+
     let Trace   = require('./lib/trace.js').Trace;
     let symbols = Trace.getFilteredSymbols();
     let symList = _.chunk(symbols, conf.chunkSize);
