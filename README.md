@@ -39,7 +39,7 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 - 可以通过`-G`或`--gte`参数过滤出当前价到目标价的上涨空间百分比大于等于指定百分比的股票；
 - 可以通过`-U`或`--under`参数过滤出股票星级等于或在指定星级之下的股票；
 - 可以通过`-A`或`--above`参数过滤出股票星级等于或在指定星级之上的股票；
-- 通过股票代码查询相应股票的基本报价信息，例如：`star 300315,600048，600015`；
+- 通过股票代码查询相应股票的基本报价信息，多个代码之间以','或者'，'分隔，一次最多查询20个，例如：`star 300315,600048，600015`；
 - 还有更多功能正在酝酿之中，同时也欢迎大家广泛提建议；
 
 ## 股票数据文件说明
@@ -77,3 +77,6 @@ symbols:
 
 2. 股票筛选结果
 ![](https://github.com/hustcer/star/blob/master/snapshot/snapshot.png)
+
+2. 股票基本信息查询
+![](https://github.com/hustcer/star/blob/master/snapshot/query.png)
