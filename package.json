@@ -2,7 +2,7 @@
   "name": "star",
   "author": "hustcer",
   "private": true,
-  "version": "0.1.16",
+  "version": "0.1.18",
   "license": "MIT",
   "homepage": "http://traceinvest.com",
   "description": "star",
@@ -33,10 +33,10 @@
     "js-yaml": "~3.3.0",
     "lodash": "~3.9.3",
     "printf": "~0.2.3",
-    "request": "2.57.0"
+    "request": "2.58.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-eslint": "^14.0.0"
+    "grunt-eslint": "^15.0.0"
   }
 }
