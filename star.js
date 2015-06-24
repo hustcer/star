@@ -34,6 +34,8 @@ colors.setTheme(COLOR_THEME);
 
 cmd
   .version(pkg.version)
+  .usage('[options]' + ' OR'.em + ' star code1,code2，code3...，codeN')
+  .description('Star is a command line tool for STock Analysis and Research.')
   .option('-a, --all'          , 'display all stocks.')
   .option('-o, --hold'         , 'display all held stocks.')
   .option('-i, --ignore'       , 'display all ignored stocks.')
@@ -52,8 +54,8 @@ cmd
   .option('-c, --contain <pre>', 'display stocks whose code number begin with: 300,600,002 or 000, etc. multiple prefixs can be\n' + ' '.repeat(20) +
                                  ' used and should be separated by ",". ')
   .option('-s, --sort <sort>'  , 'specify sorting field, could be sorted by: code/star/price/targetp/incp/capacity/pe/pb to sort\n' + ' '.repeat(20) +
-                                 ' stocks by code, star, price, price to target percent, price increase percent, capacity, pe and\n' + ' '.repeat(20) +
-                                 ' pb separately. and sort by capacity/pe/pb only works while using tencent data source.')
+                                 ' stocks by code, star, price, price to target percent, price increase percent, capacity, PE and\n' + ' '.repeat(20) +
+                                 ' PB separately. and sort by capacity/pe/pb only works while using tencent data source.')
   .parse(process.argv);
 
 
