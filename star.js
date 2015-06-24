@@ -39,6 +39,7 @@ cmd
   .option('-a, --all'          , 'display all stocks.')
   .option('-o, --hold'         , 'display all held stocks.')
   .option('-i, --ignore'       , 'display all ignored stocks.')
+  .option('-w, --watch'        , 'watch specified stocks.')
   .option('-r, --reverse'      , 'sort stocks in ascending order according to designated field.')
   .option('-l, --limit <n>'    , 'set total display limit of current page.', parseInt)
   .option('-p, --page  <n>'    , 'specify the page index to display.', parseInt)
@@ -60,6 +61,12 @@ cmd
 
 
 let action = function() {
+
+    if(cmd.watch){
+      let Watch = require('./lib/watch.js').Watch;
+      Watch.doWatch(cmd.watch);
+      return false;
+    }
 
     if(cmd.args.length === 1 ){
 
