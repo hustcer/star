@@ -78,7 +78,7 @@ let action = function() {
 
       console.error('Input error, please try again, or run "star -h" for more help.'.error);
       return false;
-    };
+    }
 
     let Trace   = require('./lib/trace.js').Trace;
     let symbols = Trace.getFilteredSymbols();
