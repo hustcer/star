@@ -55,7 +55,9 @@
 - Fix paging limit bug.
 
 ### v0.1.18
+
 - Add query symbol basic info by symbol's code feature.
 - Update node modules: request and grunt-eslint.
+- Add watch feature with automatic price update.
 
 
