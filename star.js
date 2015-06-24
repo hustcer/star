@@ -39,7 +39,7 @@ cmd
   .option('-a, --all'          , 'display all stocks.')
   .option('-o, --hold'         , 'display all held stocks.')
   .option('-i, --ignore'       , 'display all ignored stocks.')
-  .option('-w, --watch'        , 'watch specified stocks.')
+  .option('-w, --watch [c1...]', 'watch specified stocks or watch all the stocks in watch list.')
   .option('-r, --reverse'      , 'sort stocks in ascending order according to designated field.')
   .option('-l, --limit <n>'    , 'set total display limit of current page.', parseInt)
   .option('-p, --page  <n>'    , 'specify the page index to display.', parseInt)
