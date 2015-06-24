@@ -28,7 +28,7 @@
   "dependencies": {
     "bluebird": "~2.9.30",
     "blessed": "~0.1.61",
-    "blessed-contrib": "~2.1.5",
+    "blessed-contrib": "~2.0.5",
     "colors": "~1.1.0",
     "commander": "~2.8.1",
     "iconv": "^2.1.8",
