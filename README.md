@@ -92,5 +92,5 @@ symbols:
 3. 股票基本信息查询
 ![](https://github.com/hustcer/star/blob/master/snapshot/query.png)
 
-4. 股票看盘
+4. 股票看盘(报价数据自动更新)
 ![](https://github.com/hustcer/star/blob/master/snapshot/watch.png)
