@@ -28,11 +28,11 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 
 本工具会不定时更新，升级方法如下：
 
-1. 【可选】升级node.js, 建议您使用`[nvm](https://github.com/creationix/nvm)`来管理node这样升级起来很方便，mac下也可以使用`[brew](http://brew.sh/)`来安装、升级node；
+1. 【可选】升级node.js, 建议您使用[`nvm`](https://github.com/creationix/nvm)来管理node这样升级起来很方便，mac下也可以使用[`brew`](http://brew.sh/)来安装、升级node；
 2. 切换到工具目录更新源码：`cd star/ && git pull`;
 3. 安装或者更新相应的node模块：`sudo npm install`;
 
-注意：如果`npm`安装很慢可以使用`[cnpm](https://npm.taobao.org/)`代替；未来本工具将会发布到npm里面安装升级会更方便；
+注意：如果`npm`安装很慢可以使用[`cnpm`](https://npm.taobao.org/)代替；未来本工具将会发布到npm里面安装升级会更方便；
 
 ## 具体功能列表
 
