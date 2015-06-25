@@ -59,5 +59,6 @@
 - Add query symbol basic info by symbol's code feature.
 - Update node modules: request and grunt-eslint.
 - Add watch feature with automatic price update.
+- Update blessed-contrib to v2.2.0
 
 
