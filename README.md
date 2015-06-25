@@ -1,7 +1,7 @@
 
 ## `Star`是什么?
 
-`Star`是 STock Analysis and Research tool 的简称，主要用于A股股票追踪分析。`star`目前的主要作用是根据您所设定的股票目标价及当前价计算出相对该**目标价**的上涨空间，即`(目标价-当前价)/当前价x100%`，然后将此上涨空间按顺序排列方便您从中找到上涨空间最大的股票作为买入参考。`star`不提供股价预测和股票交易服务，目前只是单纯的计算，所以它的价值很大程度上取决于您所设定的目标价的有效性，目标价可以选择近期股票的最高价格或者分析师给出的价格，在大牛市里面这样的目标价还是比较容易达到的。`star`未来可能会加入更多功能，同时也欢迎大家[反馈建议](https://github.com/hustcer/star/issues/new)。
+`Star`是 STock Analysis and Research tool 的简称，主要用于A股股票追踪分析。`star`目前的主要作用是根据您所设定的股票目标价及当前价计算出相对该**目标价**的上涨空间，即`(目标价-当前价)/当前价x100%`，然后将此上涨空间按顺序排列方便您从中找到上涨空间最大的股票作为买入参考。`star`不提供股价预测和股票交易服务，目前只是单纯的计算，所以它的价值很大程度上取决于您所设定的目标价的有效性，目标价可以选择近期股票的最高价格或者分析师给出的价格，在大牛市里面这样的目标价还是比较容易达到的。同时`star`还具有股票基本报价信息查询及看盘功能，未来可能会加入更多功能，也欢迎大家[反馈建议](https://github.com/hustcer/star/issues/new)。
 
 
 ## Donating
@@ -28,11 +28,11 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 
 本工具会不定时更新，升级方法如下：
 
-1. [可选]升级node.js, 建议您使用`nvm`来管理node这样升级起来很方便，mac下也可以使用`brew`来安装、升级node；
+1. 【可选】升级node.js, 建议您使用`[nvm](https://github.com/creationix/nvm)`来管理node这样升级起来很方便，mac下也可以使用`[brew](http://brew.sh/)`来安装、升级node；
 2. 切换到工具目录更新源码：`cd star/ && git pull`;
 3. 安装或者更新相应的node模块：`sudo npm install`;
 
-注意：如果`npm`安装很慢可以使用`cnpm`代替；未来本工具将会发布到npm里面安装升级会更方便；
+注意：如果`npm`安装很慢可以使用`[cnpm](https://npm.taobao.org/)`代替；未来本工具将会发布到npm里面安装升级会更方便；
 
 ## 具体功能列表
 
@@ -89,5 +89,8 @@ symbols:
 2. 股票筛选结果
 ![](https://github.com/hustcer/star/blob/master/snapshot/snapshot.png)
 
-2. 股票基本信息查询
+3. 股票基本信息查询
 ![](https://github.com/hustcer/star/blob/master/snapshot/query.png)
+
+4. 股票看盘
+![](https://github.com/hustcer/star/blob/master/snapshot/watch.png)
