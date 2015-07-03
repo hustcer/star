@@ -39,6 +39,7 @@ cmd
   .option('-a, --all'          , 'display all stocks.')
   .option('-o, --hold'         , 'display all held stocks.')
   .option('-i, --ignore'       , 'display all ignored stocks.')
+  .option('-C, --cal'          , 'display finance calendar.')
   .option('-w, --watch [c1...]', 'watch specified stocks or watch all the stocks in watch list.')
   .option('-r, --reverse'      , 'sort stocks in ascending order according to designated field.')
   .option('-l, --limit <n>'    , 'set total display limit of current page.', parseInt)
@@ -65,6 +66,12 @@ let action = function() {
     if(cmd.watch){
       let Watch = require('./lib/watch.js').Watch;
       Watch.doWatch(cmd.watch);
+      return false;
+    }
+
+    if(cmd.cal){
+      let Cal = require('./lib/cal.js').Cal;
+      Cal.showCal();
       return false;
     }
 
