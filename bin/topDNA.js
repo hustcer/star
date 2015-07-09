@@ -78,8 +78,7 @@ let Actions = {
                         {name:'传化股份', code:'002010'}];
 
         async.eachSeries(queryList, function(q, callback){
-            Insider.queryInsider(q.code);
-            callback();
+            Insider.queryInsider(q.code, callback);
         }, function(){
             console.log('DONE!');
         });
