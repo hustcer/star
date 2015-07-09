@@ -4,7 +4,7 @@
 ### v0.2.0
 
 - Update node modules: blessed@0.1.7/lodash@3.10.0/bluebird@2.9.32/grunt-eslint@16.0.0
-
+- Add insider trading query feature.
 
 ### v0.1.18
 
