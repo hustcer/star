@@ -63,26 +63,42 @@ cmd
                                  ' PB separately. and sort by capacity/pe/pb only works while using tencent data source.')
   .parse(process.argv);
 
+let action = 'TRACE';
 
-let action = function() {
+let actions = {
+    'WATCH'  : function(){
+        let Watch = require('./lib/watch.js').Watch;
+        Watch.doWatch(cmd.watch);
+    },
+    'INSIDER': function(){
+        let Insider = require('./lib/insider.js').Insider;
+        Insider.queryInsider(cmd.insider);
+    },
+    'QUERY'  : function(){
+        let Query = require('./lib/query.js').Query;
+        Query.doQuery(cmd.args[0]);
+    },
+    'TRACE'  : function(){
+        let Trace   = require('./lib/trace.js').Trace;
+        let symbols = Trace.getFilteredSymbols();
+        let symList = _.chunk(symbols, conf.chunkSize);
 
-    if(cmd.watch){
-      let Watch = require('./lib/watch.js').Watch;
-      Watch.doWatch(cmd.watch);
-      return false;
+        Promise
+            .resolve(symList)
+            .each(syms => Trace.querySymbols(syms))
+            .then(()   => Trace.printResults())
+            .then(()   => Trace.printSummary());
     }
+};
 
-    if(cmd.insider){
-      let Insider = require('./lib/insider.js').Insider;
-      Insider.queryInsider(cmd.insider);
-      return false;
-    }
+let doCmd = function() {
+
+    if(cmd.watch)  {  action = 'WATCH';    }
+    if(cmd.insider){  action = 'INSIDER';  }
 
     if(cmd.args.length === 1 ){
 
-      let Query = require('./lib/query.js').Query;
-      Query.doQuery(cmd.args[0]);
-      return false;
+      action = 'QUERY';
 
     }else if (cmd.args.length > 1) {
 
@@ -90,18 +106,10 @@ let action = function() {
       return false;
     }
 
-    let Trace   = require('./lib/trace.js').Trace;
-    let symbols = Trace.getFilteredSymbols();
-    let symList = _.chunk(symbols, conf.chunkSize);
-
-    Promise
-        .resolve(symList)
-        .each(syms => Trace.querySymbols(syms))
-        .then(()   => Trace.printResults())
-        .then(()   => Trace.printSummary());
+    actions[action]();
 };
 
 // Do the work!
-action();
+doCmd();
 
 
