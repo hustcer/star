@@ -9,6 +9,7 @@
 - Fix no trading records output.
 - Refactor star.js.
 - Add multiple symbol insider trading query support.
+- Add watch symbols fallback.
 
 ### v0.1.18
 
