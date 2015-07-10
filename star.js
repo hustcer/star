@@ -46,6 +46,9 @@ cmd
   .option('-p, --page  <n>'    , 'specify the page index to display.', parseInt)
   .option('-d, --data  <data>' , 'specify data provider, should be "sina" or "tencent".')
   .option('-f, --file  <file>' , 'specify symbol file path.')
+  .option('--from <2014/06/01>', 'specify the beginning date of insider tradings.')
+  .option('--to <2015/07/09>'  , 'specify the ending date of insider tradings.')
+  .option('--span <3m>'        , 'specify the month span of insider tradings from today, should be 1m~24m.')
   .option('-L, --lte   <pct> ' , 'filter the symbols whose upside potential is lower than or equal to the specified percentage.', parseInt)
   .option('-G, --gte   <pct> ' , 'filter the symbols whose upside potential is greater than or equal to the specified percentage.', parseInt)
   .option('-U, --under <star>' , 'filter the symbols whose star is under or equal to the specified star value.', parseInt)
@@ -60,26 +63,49 @@ cmd
                                  ' PB separately. and sort by capacity/pe/pb only works while using tencent data source.')
   .parse(process.argv);
 
+let action = 'TRACE';
 
-let action = function() {
+let actions = {
+    'WATCH'  : function(){
+        let Watch = require('./lib/watch.js').Watch;
+        Watch.doWatch(cmd.watch);
+    },
+    'INSIDER': function(){
+        let async   = require('async');
+        let Insider = require('./lib/insider.js').Insider;
+        let query   = cmd.insider.replace(/，/g, ',');
 
-    if(cmd.watch){
-      let Watch = require('./lib/watch.js').Watch;
-      Watch.doWatch(cmd.watch);
-      return false;
+        async.eachSeries(query.split(','), function(c, callback){
+            Insider.queryInsider(c, callback);
+        }, function(){
+            console.log('ALL DONE!');
+        });
+    },
+    'QUERY'  : function(){
+        let Query = require('./lib/query.js').Query;
+        Query.doQuery(cmd.args[0]);
+    },
+    'TRACE'  : function(){
+        let Trace   = require('./lib/trace.js').Trace;
+        let symbols = Trace.getFilteredSymbols();
+        let symList = _.chunk(symbols, conf.chunkSize);
+
+        Promise
+            .resolve(symList)
+            .each(syms => Trace.querySymbols(syms))
+            .then(()   => Trace.printResults())
+            .then(()   => Trace.printSummary());
     }
+};
 
-    if(cmd.insider){
-      let Insider = require('./lib/insider.js').Insider;
-      Insider.queryInsider(cmd.insider);
-      return false;
-    }
+let doCmd = function() {
+
+    if(cmd.watch)  {  action = 'WATCH';    }
+    if(cmd.insider){  action = 'INSIDER';  }
 
     if(cmd.args.length === 1 ){
 
-      let Query = require('./lib/query.js').Query;
-      Query.doQuery(cmd.args[0]);
-      return false;
+      action = 'QUERY';
 
     }else if (cmd.args.length > 1) {
 
@@ -87,18 +113,10 @@ let action = function() {
       return false;
     }
 
-    let Trace   = require('./lib/trace.js').Trace;
-    let symbols = Trace.getFilteredSymbols();
-    let symList = _.chunk(symbols, conf.chunkSize);
-
-    Promise
-        .resolve(symList)
-        .each(syms => Trace.querySymbols(syms))
-        .then(()   => Trace.printResults())
-        .then(()   => Trace.printSummary());
+    actions[action]();
 };
 
 // Do the work!
-action();
+doCmd();
 
 
