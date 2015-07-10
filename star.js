@@ -71,8 +71,15 @@ let actions = {
         Watch.doWatch(cmd.watch);
     },
     'INSIDER': function(){
+        let async   = require('async');
         let Insider = require('./lib/insider.js').Insider;
-        Insider.queryInsider(cmd.insider);
+        let query   = cmd.insider.replace(/，/g, ',');
+
+        async.eachSeries(query.split(','), function(c, callback){
+            Insider.queryInsider(c, callback);
+        }, function(){
+            console.log('ALL DONE!');
+        });
     },
     'QUERY'  : function(){
         let Query = require('./lib/query.js').Query;

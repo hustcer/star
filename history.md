@@ -8,6 +8,7 @@
 - Add `--from`, `--to`, `--span` param for insider trading query.
 - Fix no trading records output.
 - Refactor star.js.
+- Add multiple symbol insider trading query support.
 
 ### v0.1.18
 
