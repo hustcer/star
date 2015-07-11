@@ -27,8 +27,8 @@ colors.setTheme(COLOR_THEME);
 cmd
   .version('v0.0.1')
   .description('Private utils.')
-  .option('-i, --insider'          , 'query insider tradings in batch mode.')
-  .option('-w, --watch'            , 'watch specified symbols.')
+  .option('-i, --insider'   , 'query insider tradings in batch mode.')
+  .option('-w, --watch'     , 'watch specified symbols.')
   .parse(process.argv);
 
 let Actions = {

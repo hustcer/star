@@ -13,8 +13,8 @@ let _       = require('lodash'),
     Promise = require('bluebird'),
     cmd     = require('commander');
 
-const pkg = require('./package.json');
-let conf  = require('./lib/conf.js').conf;
+const pkg   = require('./package.json');
+let   conf  = require('./lib/conf.js').conf;
 
 /**
  * Available colors are:
@@ -63,14 +63,17 @@ cmd
                                  ' PB separately. and sort by capacity/pe/pb only works while using tencent data source.')
   .parse(process.argv);
 
-let action = 'TRACE';
+let action  = 'TRACE';
 
 let actions = {
     'WATCH'  : function(){
+
         let Watch = require('./lib/watch.js').Watch;
         Watch.doWatch(cmd.watch);
+
     },
     'INSIDER': function(){
+
         let async   = require('async');
         let Insider = require('./lib/insider.js').Insider;
         let query   = cmd.insider.replace(/，/g, ',');
@@ -80,12 +83,16 @@ let actions = {
         }, function(){
             console.log('ALL DONE!');
         });
+
     },
     'QUERY'  : function(){
+
         let Query = require('./lib/query.js').Query;
         Query.doQuery(cmd.args[0]);
+
     },
     'TRACE'  : function(){
+
         let Trace   = require('./lib/trace.js').Trace;
         let symbols = Trace.getFilteredSymbols();
         let symList = _.chunk(symbols, conf.chunkSize);
@@ -95,6 +102,7 @@ let actions = {
             .each(syms => Trace.querySymbols(syms))
             .then(()   => Trace.printResults())
             .then(()   => Trace.printSummary());
+
     }
 };
 
@@ -116,7 +124,7 @@ let doCmd = function() {
     actions[action]();
 };
 
-// Do the work!
+// Get the Job Done!
 doCmd();
 
 
