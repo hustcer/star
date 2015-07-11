@@ -10,6 +10,7 @@
 - Refactor star.js.
 - Add multiple symbol insider trading query support.
 - Add watch symbols fallback.
+- Fix HOLDSTOCK_NUM NaN bug.
 
 ### v0.1.18
 
