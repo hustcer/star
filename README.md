@@ -97,3 +97,6 @@ symbols:
 
 4. 股票看盘(报价数据自动更新)
 ![](https://github.com/hustcer/star/blob/master/snapshot/watch.png)
+
+5. 批量查询股票董监高增减持信息
+![](https://github.com/hustcer/star/blob/master/snapshot/insider.png)
