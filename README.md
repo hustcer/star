@@ -32,7 +32,7 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 2. 切换到工具目录更新源码：`cd star/ && git pull`;
 3. 安装或者更新相应的node模块：`sudo npm install`;
 
-注意：如果`npm`安装很慢可以使用[`cnpm`](https://npm.taobao.org/)代替；未来本工具将会发布到npm里面安装升级会更方便；
+注意：如果`npm`安装很慢(由于一些众所周知的原因)，可以使用[`cnpm`](https://npm.taobao.org/)代替；未来本工具将会发布到`npm`里面这样安装升级会更方便；
 
 ## 具体功能列表
 
@@ -59,8 +59,8 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 ### 股票报价自动更新/看盘
 
 - 可以通过`-w`或`--watch`参数看盘，在该模式下股票报价数据会自动更新，目前更新时间间隔为3.6秒，例如：`star -w 601179,600118,600893,000712,002625`，最终执行效果类似于在终端执行`top`命令；
-- 每次输入这些股票代码可能比较麻烦，所以为了方便起见可以修改股票配置文件的 watchList 部分内容，详见后文说明，这样每次只需要执行`star -w` 命令即可；
-- 如果 watchList 部分内容为空则自动会查找 symbol 部分股票里面 `hold` 为 `true` 的部分股票；
+- 每次输入这些股票代码可能比较麻烦，所以为了方便起见可以修改股票配置文件的 `watchList` 部分内容，详见后文说明，这样每次只需要执行`star -w` 命令即可；
+- 如果 `watchList` 部分内容为空则自动会查找 `symbols` 部分股票里面 `hold` 为 `true` 的部分股票；
 - 需要说明的是，目前看盘时股票数目有限制，最多同时观察20只股票，这个数目在大多数情况下已经足够了，加上这个限制主要是为了减少数据请求的次数；
 
 ### 董监高持股变动信息批量查询
@@ -83,13 +83,13 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 symbols:
   -
     name      : '掌趣科技'            # <字符串>公司名称
-    code      : '300315'            # <字符串>证券代码，必填，不可错
-    cheap     : 16                  # <数字>买点价位，在此价格附近买入有利可图
-    expensive : 22                  # <数字>卖点价位，在此价格附近可以卖出获利了结
-    target    : 23                  # <数字>目标价位
-    star      : 3                   # <数字>股票评级，越高越值得购买，范围：1~5
-    hold      : false               # <true/false> true 表示当前持有该股票,反之不持有
-    watch     : true                # <true/false>是否关注此股票，如果 true 则关注，否则忽略
+    code      : '300315'             # <字符串>证券代码，必填，不可错
+    cheap     : 16                   # <数字>买点价位，在此价格附近买入有利可图
+    expensive : 22                   # <数字>卖点价位，在此价格附近可以卖出获利了结
+    target    : 23                   # <数字>目标价位
+    star      : 3                    # <数字>股票评级，越高越值得购买，范围：1~5
+    hold      : false                # <true/false> true 表示当前持有该股票,反之不持有
+    watch     : true                 # <true/false>是否关注此股票，如果 true 则关注，否则忽略
     comment   : '手游;高送转;自设目标'  # <字符串>行业/概念/题材等备注,后期可用于搜索过滤
   -
     name      : '启明星辰'
@@ -137,7 +137,7 @@ watchList:
 2. 股票筛选结果
 ![](https://github.com/hustcer/star/blob/master/snapshot/snapshot.png)
 
-3. 股票基本信息查询
+3. 股票基本报价信息查询
 ![](https://github.com/hustcer/star/blob/master/snapshot/query.png)
 
 4. 股票看盘(报价数据自动更新)
