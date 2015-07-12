@@ -11,6 +11,7 @@
 - Add multiple symbol insider trading query support.
 - Add watch symbols fallback.
 - Fix HOLDSTOCK_NUM NaN bug.
+- Set max limit to be 20 for insider trading query.
 
 ### v0.1.18
 
