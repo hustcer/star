@@ -2,11 +2,14 @@
   "name": "star",
   "author": "hustcer",
   "public": true,
-  "version": "0.2.0",
+  "version": "0.2.2",
   "license": "MIT",
   "homepage": "http://traceinvest.com",
   "description": "A STock Analysis and Research tool for terminal users.",
-  "main": "star.js",
+  "main": "star",
+  "bin": {
+      "star": "./star.js"
+  },
   "contributors": [
     {
       "name": "Justin Ma",
@@ -17,7 +20,7 @@
     "start": "star.js -h"
   },
   "engines": {
-    "node": ">= 0.12.7"
+    "node": ">= 0.12.5"
   },
   "repository": {
     "type": "git",
