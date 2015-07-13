@@ -12,6 +12,7 @@
 - Add watch symbols fallback.
 - Fix HOLDSTOCK_NUM NaN bug.
 - Set max limit to be 20 for insider trading query.
+- Update readme.md and publish star to npm registry.
 
 ### v0.1.18
 

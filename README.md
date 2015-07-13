@@ -19,20 +19,16 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 `Star`是基于`node.js`的所以先要安装`node.js`, 推荐您使用最新版本的`node.js`，同时最好使用 Mac/Linux系统，Windows下目前还没测试过，理论上可以使用，如果具体使用过程中遇到问题也可以[在此反馈](https://github.com/hustcer/star/issues/new)；具体安装步骤如下：
 
 1. 安装 [node.js](https://nodejs.org/), version >= 0.12;
-1. 您还需要安装 `git`, 之后 clone `star`源码：`git clone git@github.com:hustcer/star.git`;
-1. 在`star`目录下安装依赖的 `node` 模块: `sudo npm install`;
-1. 运行`star`: `./star.js`，第一次运行的时候需要加`-f`或`--file`参数指定股票数据文件(推荐采用绝对路径)，之后可以省略该参数;
-1. 更多帮助可以参考: `./star.js --help`;
+1. 安装`star`: `sudo npm i -g star`，注意一定记得加上 `-g` 参数，这样在任意路径下都可以调用`star`命令，否则可能找不到可执行文件;
+1. 运行`star`: 直接执行 `star` 即可，第一次运行的时候需要加`-f`或`--file`参数指定股票数据文件(推荐采用绝对路径)，之后可以省略该参数;
+1. 更多帮助可以参考: `star --help`;
 
 ## 升级
 
 本工具会不定时更新，升级方法如下：
 
 1. 【可选】升级node.js, 建议您使用[`nvm`](https://github.com/creationix/nvm)来管理node这样升级起来很方便，mac下也可以使用[`brew`](http://brew.sh/)来安装、升级node；
-2. 切换到工具目录更新源码：`cd star/ && git pull`;
-3. 安装或者更新相应的node模块：`sudo npm install`;
-
-注意：如果`npm`安装很慢(由于一些众所周知的原因)，可以使用[`cnpm`](https://npm.taobao.org/)代替；未来本工具将会发布到`npm`里面这样安装升级会更方便；
+2. 更新 `star`：`sudo npm update -g star`;
 
 ## 具体功能列表
 
