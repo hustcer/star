@@ -23,6 +23,8 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 1. 运行`star`: 直接执行 `star` 即可，第一次运行的时候需要加`-f`或`--file`参数指定股票数据文件(推荐采用绝对路径)，之后可以省略该参数;
 1. 更多帮助可以参考: `star --help`;
 
+注意：如果`npm`安装很慢(由于一些众所周知的原因)，可以使用[`cnpm`](https://npm.taobao.org/)代替，下同；
+
 ## 升级
 
 本工具会不定时更新，升级方法如下：
