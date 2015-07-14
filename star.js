@@ -15,6 +15,7 @@ let _       = require('lodash'),
 
 const pkg   = require('./package.json');
 let   conf  = require('./lib/conf.js').conf;
+let action  = null;   // cmd action
 
 /**
  * Available colors are:
@@ -64,8 +65,6 @@ cmd
                                  ' PB separately. and sort by capacity/pe/pb only works while using tencent data source.')
   .parse(process.argv);
 
-let action  = 'TRACE';
-
 let actions = {
     'WATCH'  : function(){
 
@@ -114,11 +113,13 @@ let actions = {
             .each(syms => Trace.querySymbols(syms))
             .then(()   => Trace.printResults())
             .then(()   => Trace.printSummary());
-
     }
 };
 
 let doCmd = function() {
+
+    // 'TRACE' is the default action
+    action  = 'TRACE';
 
     if(cmd.watch)  {  action = 'WATCH';    }
     if(cmd.insider){  action = 'INSIDER';  }

@@ -1,14 +1,21 @@
 
 ## Change History
 
+### v0.2.5
+
+- Update blessed-contrib to v2.2.1
+
+
 ### v0.2.3
 
 - Add finance calendar feature.
 - Add day of week field for finance calendar.
 
+
 ### v0.2.2
 
 - Publish star to npm and cnpm.
+
 
 ### v0.2.0
 
@@ -22,6 +29,7 @@
 - Fix HOLDSTOCK_NUM NaN bug.
 - Set max limit to be 20 for insider trading query.
 - Update readme.md and publish star to npm registry.
+
 
 ### v0.1.18
 
