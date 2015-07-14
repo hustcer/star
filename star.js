@@ -73,6 +73,12 @@ let actions = {
         Watch.doWatch(cmd.watch);
 
     },
+    'CAL' : function(){
+
+        let Cal = require('./lib/cal.js').Cal;
+        Cal.showCal();
+
+    },
     'INSIDER': function(){
 
         let async   = require('async');
@@ -116,12 +122,7 @@ let doCmd = function() {
 
     if(cmd.watch)  {  action = 'WATCH';    }
     if(cmd.insider){  action = 'INSIDER';  }
-
-    if(cmd.cal){
-      let Cal = require('./lib/cal.js').Cal;
-      Cal.showCal();
-      return false;
-    }
+    if(cmd.cal)    {  action = 'CAL';      }
 
     if(cmd.args.length === 1 ){
 
