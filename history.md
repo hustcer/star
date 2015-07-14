@@ -4,6 +4,7 @@
 ### v0.2.3
 
 - Add finance calendar feature.
+- Add day of week field for finance calendar.
 
 ### v0.2.2
 
