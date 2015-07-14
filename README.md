@@ -68,6 +68,10 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 - 可以通过`--span 6m`参数限定高管交易记录的查询时间跨度月数，取值范围从`1m`到`24m`，`6m`表示从现在开始往前推6个月，默认为`12m`，例如：`star -i 000768,002456,600118,300036 --span 3m`；
 - 需要注意的是目前一次最多可以查询20只股票，如果你有更多股票可以分多次进行查询，加上这个限制同样是为了减少数据请求次数和服务器压力；
 
+### 未来30日财经日历
+
+- 可以通过`-C`或`--cal`参数查询中国股市未来30日题材前瞻；
+
 ### 其它
 
 - 还有更多功能正在酝酿之中，同时也欢迎大家广泛提建议；
@@ -144,3 +148,6 @@ watchList:
 
 5. 批量查询股票董监高增减持信息
 ![](https://github.com/hustcer/star/blob/master/snapshot/insider.png)
+
+6. 中国股市未来30日题材前瞻
+![](https://github.com/hustcer/star/blob/master/snapshot/cal.png)
