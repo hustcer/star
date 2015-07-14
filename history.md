@@ -1,6 +1,10 @@
 
 ## Change History
 
+### v0.2.3
+
+- Add finance calendar feature.
+
 ### v0.2.2
 
 - Publish star to npm and cnpm.
