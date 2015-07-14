@@ -20,7 +20,7 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 
 1. 安装 [node.js](https://nodejs.org/), version >= 0.12.5，始终建议您采用最新版本的 `node.js`;
 1. 安装`star`: `sudo npm i -g star`，注意一定记得加上 `-g` 参数，这样在任意路径下都可以调用`star`命令，否则可能找不到可执行文件;
-1. 运行`star`: 直接执行 `star` 即可，第一次运行的时候需要加`-f`或`--file`参数指定股票数据文件(推荐采用绝对路径)，之后可以省略该参数;
+1. 运行`star`: 直接执行 `star` 即可，第一次运行的时候需要加`-f`或`--file`参数指定股票数据文件(推荐采用绝对路径,详见后文说明)，之后可以省略该参数;
 1. 更多帮助可以参考: `star --help`;
 
 注意：如果`npm`安装很慢(由于一些众所周知的原因)，可以使用[`cnpm`](https://npm.taobao.org/)代替，下同；
