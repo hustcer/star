@@ -38,6 +38,7 @@ cmd
   .description('Star is a command line tool for STock Analysis and Research.')
   .option('-a, --all'          , 'display all stocks.')
   .option('-o, --hold'         , 'display all held stocks.')
+  .option('-C, --cal'          , 'display finance calendar of the future month.')
   .option('-I, --ignore'       , 'display all ignored stocks.')
   .option('-i, --insider <c>'  , 'display insider trading records of specified stocks.')
   .option('-w, --watch [c1...]', 'watch specified stocks or watch all the stocks in watch list.')
@@ -70,6 +71,12 @@ let actions = {
 
         let Watch = require('./lib/watch.js').Watch;
         Watch.doWatch(cmd.watch);
+
+    },
+    'CAL' : function(){
+
+        let Cal = require('./lib/cal.js').Cal;
+        Cal.showCal();
 
     },
     'INSIDER': function(){
@@ -115,6 +122,7 @@ let doCmd = function() {
 
     if(cmd.watch)  {  action = 'WATCH';    }
     if(cmd.insider){  action = 'INSIDER';  }
+    if(cmd.cal)    {  action = 'CAL';      }
 
     if(cmd.args.length === 1 ){
 
