@@ -4,6 +4,7 @@
 ### v0.2.5
 
 - Fix Trailing comma bugs when run `star *` cmds.
+- Set conf.chunkSize from 20 to 25.
 
 
 ### v0.2.4

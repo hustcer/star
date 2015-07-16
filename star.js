@@ -84,8 +84,8 @@ let actions = {
         let Insider = require('./lib/insider.js').Insider;
         let query   = cmd.insider.replace(/，/g, ',');
         let symbols = _.trimRight(query, ',').split(',');
-        if(symbols.length > 20){
-            console.error('You can query at most 20 symbols once.'.error);
+        if(symbols.length > conf.chunkSize){
+            console.error(('You can query at most ' + conf.chunkSize + ' symbols once.').error);
             return false;
         }
 
