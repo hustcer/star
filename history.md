@@ -5,6 +5,7 @@
 
 - Update blessed-contrib to v2.2.1
 - Trim inline tabs of events in finance calendar.
+- Update bluebird to v2.9.34.
 
 
 ### v0.2.3
