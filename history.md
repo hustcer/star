@@ -1,11 +1,12 @@
 
 ## Change History
 
-### v0.2.5
+### v0.2.4
 
 - Update blessed-contrib to v2.2.1
 - Trim inline tabs of events in finance calendar.
 - Update bluebird to v2.9.34.
+- Add trace symbol duplication check.
 
 
 ### v0.2.3

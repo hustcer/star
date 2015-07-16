@@ -106,6 +106,9 @@ let actions = {
 
         let Trace   = require('./lib/trace.js').Trace;
         let symbols = Trace.getFilteredSymbols();
+
+        if(!symbols){ return false; }
+
         let symList = _.chunk(symbols, conf.chunkSize);
 
         Promise
