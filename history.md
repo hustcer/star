@@ -4,6 +4,7 @@
 ### v0.2.5
 
 - Update blessed-contrib to v2.2.1
+- Trim inline tabs of events in finance calendar.
 
 
 ### v0.2.3
