@@ -1,6 +1,11 @@
 
 ## Change History
 
+### v0.2.5
+
+- Fix Trailing comma bugs when run `star *` cmds.
+
+
 ### v0.2.4
 
 - Update blessed-contrib to v2.2.1

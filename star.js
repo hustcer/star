@@ -83,7 +83,7 @@ let actions = {
         let async   = require('async');
         let Insider = require('./lib/insider.js').Insider;
         let query   = cmd.insider.replace(/，/g, ',');
-        let symbols = query.split(',');
+        let symbols = _.trimRight(query, ',').split(',');
         if(symbols.length > 20){
             console.error('The queried symbols should be no more than 20 one time.'.error);
             return false;
