@@ -44,6 +44,7 @@ cmd
   .option('-i, --insider [c]'  , 'display insider trading records of specified stocks.')
   .option('--latest-sz'        , 'query latest insider tradings of ShenZhen market, should be used with "-i" or "--insider".')
   .option('--latest-sh'        , 'query latest insider tradings of ShangHai market, should be used with "-i" or "--insider".')
+  .option('--show-detail'      , 'show detail latest insider trading records, should be used with "-i" or "--insider".')
   .option('-w, --watch [c1...]', 'watch specified stocks or watch all the stocks in watch list.')
   .option('-r, --reverse'      , 'sort stocks in ascending order according to designated field.')
   .option('-l, --limit <n>'    , 'set total display limit of current page.', parseInt)
