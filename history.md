@@ -5,6 +5,7 @@
 
 - Fix Trailing comma bugs when run `star *` cmds.
 - Set conf.chunkSize from 20 to 25.
+- Add support for query latest insider tradings.
 
 
 ### v0.2.4
