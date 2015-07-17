@@ -6,6 +6,7 @@
 - Fix Trailing comma bugs when run `star *` cmds.
 - Set conf.chunkSize from 20 to 25.
 - Add support for query latest insider tradings.
+- Fix insider trading query 408 error code.
 
 
 ### v0.2.4
