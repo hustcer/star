@@ -41,7 +41,8 @@ cmd
   .option('-o, --hold'         , 'display all held stocks.')
   .option('-C, --cal'          , 'display finance calendar of the future month.')
   .option('-I, --ignore'       , 'display all ignored stocks.')
-  .option('-i, --insider <c>'  , 'display insider trading records of specified stocks.')
+  .option('-i, --insider [c]'  , 'display insider trading records of specified stocks.')
+  .option('--latest'           , 'query latest insider tradings, should be used with "-i" or "--insider".')
   .option('-w, --watch [c1...]', 'watch specified stocks or watch all the stocks in watch list.')
   .option('-r, --reverse'      , 'sort stocks in ascending order according to designated field.')
   .option('-l, --limit <n>'    , 'set total display limit of current page.', parseInt)
@@ -82,6 +83,14 @@ let actions = {
 
         let async   = require('async');
         let Insider = require('./lib/insider.js').Insider;
+
+        if(cmd.latest){ Insider.queryLatest(); return false; }
+
+        if(cmd.insider === true){
+          console.error('Input Error: "--insider" or "-i" should be used with symbol code or "--latest"'.error);
+          return false;
+        }
+
         let query   = cmd.insider.replace(/，/g, ',');
         let symbols = _.trimRight(query, ',').split(',');
         if(symbols.length > conf.chunkSize){
