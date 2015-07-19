@@ -9,6 +9,7 @@
 - Fix insider trading query 408 error code.
 - Improve console output string padding problem.
 - Add latest insider trading summary limit.
+- Update request timeout error msg of SZ market insider trading query.
 
 
 ### v0.2.4
