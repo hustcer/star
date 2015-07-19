@@ -7,6 +7,7 @@
 - Set conf.chunkSize from 20 to 25.
 - Add support for query latest insider tradings.
 - Fix insider trading query 408 error code.
+- Improve console output string padding problem.
 
 
 ### v0.2.4
