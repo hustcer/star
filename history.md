@@ -8,6 +8,7 @@
 - Add support for query latest insider tradings.
 - Fix insider trading query 408 error code.
 - Improve console output string padding problem.
+- Add latest insider trading summary limit.
 
 
 ### v0.2.4
