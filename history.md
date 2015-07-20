@@ -1,6 +1,10 @@
 
 ## Change History
 
+### v0.2.6
+
+- Make `star -wo` or `star -w -o` to watch held stocks.
+
 ### v0.2.5
 
 - Fix Trailing comma bugs when run `star *` cmds.
