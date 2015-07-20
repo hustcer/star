@@ -4,6 +4,7 @@
 ### v0.2.6
 
 - Make `star -wo` or `star -w -o` to watch held stocks.
+- Use moment 'zh-cn' locale instead of const days to format dayOfWeek output in finance cal.
 
 ### v0.2.5
 
