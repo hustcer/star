@@ -5,6 +5,7 @@
 
 - Make `star -wo` or `star -w -o` to watch held stocks.
 - Use moment 'zh-cn' locale instead of const days to format dayOfWeek output in finance cal.
+- Update nodejs modules:async@~1.4.0,blessed@~0.1.14,blessed-contrib@~2.3.1.
 
 ### v0.2.5
 
