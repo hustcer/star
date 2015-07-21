@@ -32,6 +32,18 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 1. 【可选】升级node.js, 建议您使用[`nvm`](https://github.com/creationix/nvm)来管理node这样升级起来很方便，mac下也可以使用[`brew`](http://brew.sh/)来安装、升级node；
 2. 更新 `star`：`sudo npm update -g star`;
 
+## What' New ?
+
+变更详情 [**见此**](history.md)，主要变更如下：
+
+- 【v0.2.6】 新增`--lteb` 和 `--gtes`参数，用于筛选当前价小于等于适合买入的便宜价格或者大于等于应该卖出的昂贵价格的股票(分别对应股票配置里面的`cheap`和`expensive`价格)。
+- 【v0.2.6】 允许通过 `star -wo` 或者 `star -w -o` watch 当前持有的股票, 原有的 fallback 机制不变。
+- 【v0.2.5】 改进内部交易查询等在命令行终端输出时的对齐问题。
+- 【v0.2.5】 看盘股票列表的数目从 **20** 调整到 **25**，批量请求的数目也作相应地调整。
+- 【v0.2.4】 财经日历的事件列表输出排版改进——去掉冗余的空白字符。
+- 【v0.2.4】 股票配置文件的`symbols`部分添加重复股票检查功能。
+
+
 ## 具体功能列表
 
 ### 股票追踪
