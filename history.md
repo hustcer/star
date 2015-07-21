@@ -7,6 +7,7 @@
 - Use moment 'zh-cn' locale instead of const days to format dayOfWeek output in finance cal.
 - Update nodejs modules:async@~1.4.0,blessed@~0.1.14,blessed-contrib@~2.3.1.
 - Add `--lteb` and `--gtes` support to filter the stocks whose current price is lower than buy price or greater than sell price.
+- Fix bug of query none exist symbols.
 
 ### v0.2.5
 
