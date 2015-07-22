@@ -1,6 +1,11 @@
 
 ## Change History
 
+### v0.2.7
+
+- Add `--lteb [pct]` support to query symbols that make 100*(s.price - s.cheap)/s.price <= pct.
+- Add `--gtes [pct]` support to query symbols that make 100*(s.price - s.expensive)/s.price >= pct.
+
 ### v0.2.6
 
 - Make `star -wo` or `star -w -o` to watch held stocks.

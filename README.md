@@ -36,6 +36,8 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 
 变更详情 [**见此**](history.md)，主要变更如下：
 
+- 【v0.2.7】 增加`--lteb [pct]` 参数用于筛选出如下条件成立的股票：`100*(s.price - s.cheap)/s.price <= pct`，如果`pct`为空则上述条件退化为：`s.price <= s.cheap`.
+- 【v0.2.7】 增加`--gtes [pct]` 参数用于筛选出如下条件成立的股票：`100*(s.price - s.expensive)/s.price >= pct`，如果`pct`为空则上述条件退化为：`s.price >= s.expensive`.
 - 【v0.2.6】 新增`--lteb` 和 `--gtes`参数，用于筛选当前价小于等于适合买入的便宜价格或者大于等于应该卖出的昂贵价格的股票(分别对应股票配置里面的`cheap`和`expensive`价格)。
 - 【v0.2.6】 允许通过 `star -wo` 或者 `star -w -o` watch 当前持有的股票, 原有的 fallback 机制不变。
 - 【v0.2.5】 改进内部交易查询等在命令行终端输出时的对齐问题。

@@ -58,8 +58,8 @@ cmd
   .option('-G, --gte   <pct> ' , 'filter the symbols whose upside potential is greater than or equal to the specified percentage.', parseInt)
   .option('-U, --under <star>' , 'filter the symbols whose star is under or equal to the specified star value.', parseInt)
   .option('-A, --above <star>' , 'filter the symbols whose star is above or equal to the specified star value.', parseInt)
-  .option('--lteb'             , "filter the symbols whose current price is lower than or equal to it's buy/cheap price")
-  .option('--gtes'             , "filter the symbols whose current price is greater than or equal to it's sell/expensive price")
+  .option('--lteb [pct]'       , "filter the symbols whose current price is lower than or equal to it's buy/cheap price", parseInt)
+  .option('--gtes [pct]'       , "filter the symbols whose current price is greater than or equal to it's sell/expensive price", parseInt)
   .option('-g, --grep  <kw>  ' , 'specify the keyword to grep in name or comment, multiple keywords should be separated by ",".')
   .option('-e, --exclude <pre>', 'exclude stocks whose code number begin with: 300,600,002 or 000, etc. multiple prefixs can be\n' + ' '.repeat(20) +
                                  ' used and should be separated by "," or "，". ')
