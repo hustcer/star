@@ -25,6 +25,14 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 
 注意：如果`npm`安装很慢(由于一些众所周知的原因)，可以使用[`cnpm`](https://npm.taobao.org/)代替，下同；
 
+### 从源码安装
+
+如需从源码安装用如下步骤替换前面的**第二步**即可：
+
+1. 在安装 `git` 之后 clone `star`源码：`git clone git@github.com:hustcer/star.git`;
+1. 在`star`目录下安装依赖的 `node` 模块: `cd star && sudo npm install`;
+1. 然后执行 `./star.js` 即可，推荐创建软链接：`ln -s /absolute/path/to/star.js /usr/local/bin/star`, 这样就可以在任意位置通过`star`命令进行调用；
+
 ## 升级
 
 本工具会不定时更新，升级方法如下：
