@@ -42,7 +42,7 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 
 ## FAQ
 
-    搜集了一些常见问题及解决办法，参考[这里](FAQ.md)
+搜集了一些常见问题及解决办法，参考[这里](FAQ.md)
 
 ## What' New ?
 
