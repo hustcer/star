@@ -40,6 +40,10 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 1. 【可选】升级node.js, 建议您使用[`nvm`](https://github.com/creationix/nvm)来管理node这样升级起来很方便，mac下也可以使用[`brew`](http://brew.sh/)来安装、升级node；
 2. 更新 `star`：`sudo npm update -g star`;
 
+## FAQ
+
+搜集了一些常见问题及解决办法，参考[这里](FAQ.md)
+
 ## What' New ?
 
 变更详情 [**见此**](history.md)，主要变更如下：
