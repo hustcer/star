@@ -5,6 +5,7 @@
 
 - Add `--lteb [pct]` support to query symbols that make 100*(s.price - s.cheap)/s.price <= pct.
 - Add `--gtes [pct]` support to query symbols that make 100*(s.price - s.expensive)/s.price >= pct.
+- Update node modules:blessed,blessed-contrib,moment,request.
 
 ### v0.2.6
 
