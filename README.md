@@ -66,7 +66,7 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 
 - 设置股票的买入价、卖出价、目标价、星级、备注等，可以自动获取股票的当前价格并且计算距离目标价的上涨空间：`(目标价-当前价)/当前价x100%`，上涨空间最大的股票通常也是最有利可图的，这也是本工具的最主要功能，方便快速决定值得买入的股票；
 - 支持两个股票信息获取数据源：腾讯和新浪股票数据源，万一其中一个有问题可以通过`-d`或`--data`参数切换到另一个；
-- 可以按照股票的code(代码)、star(星级)、price(当前价)、incp(当前涨幅)、bdiff((s.price - s.cheap)/s.price)、sdiff((s.price - s.expensive)/s.price)、targetp(上涨空间:(s.target - s.price)/s.price)、capacity(市值)、pe(PE)、pb(PB)等条件进行升、降序排序，其中后三项排序只有在采用腾讯数据接口的时候才支持；
+- 可以按照股票的code(证券代码)、star(星级)、price(当前价)、incp(当前涨幅)、bdiff( `(s.price - s.cheap)/s.price` )、sdiff( `(s.price - s.expensive)/s.price` )、targetp(上涨空间: `(s.target - s.price)/s.price` )、capacity(市值)、pe(PE)、pb(PB)等条件进行升、降序排序，其中后三项排序只有在采用腾讯数据接口的时候才支持；
 - 股票数据比较多的时候可以设置每次显示多少条数据(通过`-l`或`--limit`参数)，并且进行分页(通过`-p`或`--page`参数)；
 - 可以设置是否关注、持有某股票，并根据这些条件进行过滤：可以显示所有股票(-a, --all)、只显示持有的股票(-o, --hold)、只显示不再关注的股票(-I, --ignore)；
 - 可以通过`-e`或`--exclude`参数排除所有证券代码以300,600,002或者000开头的股票，多个前缀之间以','或者'，'分隔；
