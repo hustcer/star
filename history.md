@@ -3,7 +3,8 @@
 
 ### v0.2.8
 
-- Add sort by 'bdiff' and 'sdiff' feature to sort stocks by `(s.price - s.cheap)/s.price` and `(s.price - s.expensive)/s.price` separately.
+- Add sort by `bdiff` feature to sort stocks by `(s.price - s.cheap)/s.price`.
+- Add sort by `sdiff` feature to sort stocks by `(s.price - s.expensive)/s.price`.
 
 ### v0.2.7
 
