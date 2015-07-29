@@ -62,9 +62,10 @@ cmd
                                  ' used and should be separated by "," or "，". ')
   .option('-c, --contain <pre>', 'display stocks whose code number begin with: 300,600,002 or 000, etc. multiple prefixs can be\n' + ' '.repeat(20) +
                                  ' used and should be separated by "," or "，". ')
-  .option('-s, --sort <sort>'  , 'specify sorting field, could be sorted by: code/star/price/targetp/incp/capacity/pe/pb to sort\n' + ' '.repeat(20) +
-                                 ' stocks by code, star, price, price to target percent, price increase percent, capacity, PE and\n' + ' '.repeat(20) +
-                                 ' PB separately. and sort by capacity/pe/pb only works while using tencent data source.')
+  .option('-s, --sort <sort>'  , 'specify sorting field, could be sorted by: code/star/price/targetp/incp/bdiff/sdiff/capacity/\n' + ' '.repeat(20) +
+                                 ' pe/pb to sort stocks by code, star, price, price to target percent, price increase percent, \n' + ' '.repeat(20) +
+                                 ' (s.price - s.cheap)/s.price, (s.price - s.expensive)/s.price, capacity, PE and PB separately.\n' + ' '.repeat(20) +
+                                 ' and sort by capacity/pe/pb only works while using tencent data source.')
   .parse(process.argv);
 
 let actions = {
