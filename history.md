@@ -1,6 +1,11 @@
 
 ## Change History
 
+### v0.2.8
+
+- Add sort by `bdiff` feature to sort stocks by `(s.price - s.cheap)/s.price`.
+- Add sort by `sdiff` feature to sort stocks by `(s.price - s.expensive)/s.price`.
+
 ### v0.2.7
 
 - Add `--lteb [pct]` support to query symbols that make 100*(s.price - s.cheap)/s.price <= pct.

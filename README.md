@@ -48,6 +48,8 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 
 变更详情 [**见此**](history.md)，主要变更如下：
 
+- 【v0.2.8】 股票追踪增加按`bdiff`即根据`(s.price - s.cheap)/s.price`指标排序.
+- 【v0.2.8】 股票追踪增加按`sdiff`即根据`(s.price - s.expensive)/s.price`指标排序.
 - 【v0.2.7】 增加`--lteb [pct]` 参数用于筛选出使得如下条件成立的股票：`100*(s.price - s.cheap)/s.price <= pct`，如果`pct`为空则上述条件退化为：`s.price <= s.cheap`.
 - 【v0.2.7】 增加`--gtes [pct]` 参数用于筛选出使得如下条件成立的股票：`100*(s.price - s.expensive)/s.price >= pct`，如果`pct`为空则上述条件退化为：`s.price >= s.expensive`.
 - 【v0.2.6】 新增`--lteb` 和 `--gtes`参数，用于筛选当前价小于等于适合买入的便宜价格或者大于等于应该卖出的昂贵价格的股票(分别对应股票配置里面的`cheap`和`expensive`价格)。
@@ -64,7 +66,7 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 
 - 设置股票的买入价、卖出价、目标价、星级、备注等，可以自动获取股票的当前价格并且计算距离目标价的上涨空间：`(目标价-当前价)/当前价x100%`，上涨空间最大的股票通常也是最有利可图的，这也是本工具的最主要功能，方便快速决定值得买入的股票；
 - 支持两个股票信息获取数据源：腾讯和新浪股票数据源，万一其中一个有问题可以通过`-d`或`--data`参数切换到另一个；
-- 可以按照股票的代码、星级、当前价、当前涨幅、上涨空间、市值、PE、PB等条件进行升、降序排序，其中后三项排序只有在采用腾讯数据接口的时候才支持；
+- 可以按照股票的code(证券代码)、star(星级)、price(当前价)、incp(当前涨幅)、bdiff( `(s.price - s.cheap)/s.price` )、sdiff( `(s.price - s.expensive)/s.price` )、targetp(上涨空间: `(s.target - s.price)/s.price` )、capacity(市值)、pe(PE)、pb(PB)等条件进行升、降序排序，其中后三项排序只有在采用腾讯数据接口的时候才支持；
 - 股票数据比较多的时候可以设置每次显示多少条数据(通过`-l`或`--limit`参数)，并且进行分页(通过`-p`或`--page`参数)；
 - 可以设置是否关注、持有某股票，并根据这些条件进行过滤：可以显示所有股票(-a, --all)、只显示持有的股票(-o, --hold)、只显示不再关注的股票(-I, --ignore)；
 - 可以通过`-e`或`--exclude`参数排除所有证券代码以300,600,002或者000开头的股票，多个前缀之间以','或者'，'分隔；
