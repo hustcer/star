@@ -61,6 +61,7 @@ cmd
   .option('--lteb [pct]'       , "filter the symbols whose current price is lower than or equal to it's buy/cheap price", parseInt)
   .option('--gtes [pct]'       , "filter the symbols whose current price is greater than or equal to it's sell/expensive price", parseInt)
   .option('-g, --grep  <kw>  ' , 'specify the keyword to grep in name or comment, multiple keywords should be separated by ",".')
+  .option('--remove  <kw>    ' , 'remove the symbols from result with the specified keywords in name or comment, multiple keywords should be separated by ",".')
   .option('-e, --exclude <pre>', 'exclude stocks whose code number begin with: 300,600,002 or 000, etc. multiple prefixs can be\n' + ' '.repeat(20) +
                                  ' used and should be separated by "," or "，". ')
   .option('-c, --contain <pre>', 'display stocks whose code number begin with: 300,600,002 or 000, etc. multiple prefixs can be\n' + ' '.repeat(20) +

@@ -5,6 +5,8 @@
 
 - Add sort by `bdiff` feature to sort stocks by `(s.price - s.cheap)/s.price`.
 - Add sort by `sdiff` feature to sort stocks by `(s.price - s.expensive)/s.price`.
+- Remove the symbols from result with the specified keywords in name or comment.
+- Update node modules: moment to 2.10.6.
 
 ### v0.2.7
 
