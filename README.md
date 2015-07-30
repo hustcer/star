@@ -48,6 +48,7 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 
 变更详情 [**见此**](history.md)，主要变更如下：
 
+- 【v0.2.9】 修复查询深市个股董监高持股变动信息时的分页问题，可以通过`-p`或者`--page`参数指定要查询的分页，默认为第一页。
 - 【v0.2.8】 增加`--remove`参数筛选证券名称和备注里面**不包含**指定关键词的股票，多个关键词之间用','或'，'隔开.
 - 【v0.2.8】 股票追踪增加按`bdiff`即根据`(s.price - s.cheap)/s.price`指标排序.
 - 【v0.2.8】 股票追踪增加按`sdiff`即根据`(s.price - s.expensive)/s.price`指标排序.
