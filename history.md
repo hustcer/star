@@ -1,6 +1,10 @@
 
 ## Change History
 
+### v0.2.9
+
+- Fix Insider trading paging bug.
+
 ### v0.2.8
 
 - Add sort by `bdiff` feature to sort stocks by `(s.price - s.cheap)/s.price`.
