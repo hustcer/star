@@ -3,7 +3,7 @@
 
 ### v0.2.9
 
-- Fix Insider trading paging bug.
+- Fix Insider trading query paging bug.
 
 ### v0.2.8
 
