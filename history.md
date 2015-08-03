@@ -4,6 +4,7 @@
 ### v0.2.9
 
 - Fix Insider trading query paging bug.
+- Update nodejs modules:blessed@0.1.20,blessed-contrib@2.3.3,grunt-eslint@17.0.0.
 
 ### v0.2.8
 
