@@ -92,11 +92,7 @@ let actions = {
 
         if(cmd.latestSz){ Insider.querySZLatest(); return false; }
         if(cmd.latestSh){ Insider.querySHLatest(); return false; }
-
-        if(cmd.insider === true){
-          console.error('Input Error: "--insider" or "-i" should be used with symbol code or "--latest-sh"/"--latest-sz"'.error);
-          return false;
-        }
+        if(cmd.insider === true){ Insider.queryMiscInsider(); return false; }
 
         let query   = cmd.insider.replace(/，/g, ',');
         let symbols = _.trimRight(query, ',').split(',');
