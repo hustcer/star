@@ -94,7 +94,7 @@ let actions = {
         if(cmd.latestSh){ Insider.querySHLatest(); return false; }
 
         if(cmd.insider === true){
-          console.error('Input Error: "--insider" or "-i" should be used with symbol code or "--latest"'.error);
+          console.error('Input Error: "--insider" or "-i" should be used with symbol code or "--latest-sh"/"--latest-sz"'.error);
           return false;
         }
 
