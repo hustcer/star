@@ -32,6 +32,8 @@
 - Fix Trailing comma bugs when run `star *` cmds.
 - Set conf.chunkSize from 20 to 25.
 - Improve console output string padding problem.
+- Add support for query latest insider tradings.
+- Add latest insider trading summary limit.
 - Update request timeout error msg for SZ market insider trading query.
 
 
