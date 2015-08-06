@@ -4,7 +4,8 @@
 ### v0.2.9
 
 - Fix Insider trading query paging bug.
-- Update nodejs modules:blessed@0.1.20,blessed-contrib@2.3.3,grunt-eslint@17.0.0.
+- Update node.js modules:blessed@0.1.20,blessed-contrib@2.3.3,grunt-eslint@17.0.0.
+- Update node.js module:lodash@3.10.1.
 
 ### v0.2.8
 
@@ -23,7 +24,7 @@
 
 - Make `star -wo` or `star -w -o` to watch held stocks.
 - Use moment 'zh-cn' locale instead of const days to format dayOfWeek output in finance cal.
-- Update nodejs modules:async@~1.4.0,blessed@~0.1.14,blessed-contrib@~2.3.1.
+- Update node.js modules:async@~1.4.0,blessed@~0.1.14,blessed-contrib@~2.3.1.
 - Add `--lteb` and `--gtes` support to filter the stocks whose current price is lower than buy price or greater than sell price.
 - Fix bug of query none exist symbols.
 

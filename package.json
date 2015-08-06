@@ -42,7 +42,7 @@
     "commander": "~2.8.1",
     "iconv": "^2.1.8",
     "js-yaml": "~3.3.0",
-    "lodash": "~3.10.0",
+    "lodash": "~3.10.1",
     "moment":"~2.10.6",
     "numeral": "~1.5.3",
     "printf": "~0.2.3",
