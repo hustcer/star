@@ -42,6 +42,8 @@ cmd
   .option('-C, --cal'          , 'display finance calendar of the future month.')
   .option('-I, --ignore'       , 'display all ignored stocks.')
   .option('-i, --insider [c]'  , 'display insider trading records of specified stocks.')
+  .option('    --market <mkt>' , 'specify the market of insider trading query, case insensitive:SZM-深圳主板, SZGEM-深圳创业板, SZSME-深圳中小板,\n' + ' '.repeat(20) +
+                                 ' SHM-上海主板. multiple market should be separated by "," or "，". ')
   .option('--latest-sz'        , 'query latest insider tradings of ShenZhen market, should be used with "-i" or "--insider".')
   .option('--latest-sh'        , 'query latest insider tradings of ShangHai market, should be used with "-i" or "--insider".')
   .option('--show-detail'      , 'show detail latest insider trading records, should be used with "-i" or "--insider".')

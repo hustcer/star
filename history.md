@@ -6,6 +6,7 @@
 - Fix Insider trading query paging bug.
 - Update node.js modules:blessed@0.1.20,blessed-contrib@2.3.3,grunt-eslint@17.0.0.
 - Update node.js module:lodash@3.10.1.
+- Add `--market` support while querying insider tradings:SZM-深圳主板, SZGEM-深圳创业板, SZSME-深圳中小板, SHM-上海主板.
 
 ### v0.2.8
 
