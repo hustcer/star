@@ -41,9 +41,12 @@ cmd
   .option('-o, --hold'         , 'display all held stocks.')
   .option('-C, --cal'          , 'display finance calendar of the future month.')
   .option('-I, --ignore'       , 'display all ignored stocks.')
-  .option('-i, --insider [c]'  , 'display insider trading records of specified stocks.')
-  .option('--latest-sz'        , 'query latest insider tradings of ShenZhen market, should be used with "-i" or "--insider".')
-  .option('--latest-sh'        , 'query latest insider tradings of ShangHai market, should be used with "-i" or "--insider".')
+  .option('-i, --insider [c]'  , 'display insider trading records of specified stocks. data source: sse or szse')
+  .option('    --code [code]'  , 'specify the stock code of insider tradings you want to query. data source: traceinvest.com')
+  .option('    --market <mkt>' , 'specify the market of insider trading query, case insensitive:SZM-深圳主板, SZGEM-深圳创业板, SZSME-深圳中小板,\n' + ' '.repeat(20) +
+                                 ' SHM-上海主板. multiple market should be separated by "," or "，". ')
+  .option('--latest-sz'        , 'query latest insider tradings of ShenZhen market, should be used with "-i" or "--insider". data source: szse')
+  .option('--latest-sh'        , 'query latest insider tradings of ShangHai market, should be used with "-i" or "--insider". data source: sse')
   .option('--show-detail'      , 'show detail latest insider trading records, should be used with "-i" or "--insider".')
   .option('-w, --watch [c1...]', 'watch specified stocks or watch all the stocks in watch list.')
   .option('-r, --reverse'      , 'sort stocks in ascending order according to designated field.')
@@ -92,11 +95,7 @@ let actions = {
 
         if(cmd.latestSz){ Insider.querySZLatest(); return false; }
         if(cmd.latestSh){ Insider.querySHLatest(); return false; }
-
-        if(cmd.insider === true){
-          console.error('Input Error: "--insider" or "-i" should be used with symbol code or "--latest-sh"/"--latest-sz"'.error);
-          return false;
-        }
+        if(cmd.insider === true){ Insider.queryMiscInsider(); return false; }
 
         let query   = cmd.insider.replace(/，/g, ',');
         let symbols = _.trimRight(query, ',').split(',');
