@@ -1,0 +1,6 @@
+bin
+eslint.json
+snapshot
+output.*
+node_modules
+TODO.md
