@@ -10,6 +10,7 @@
 - Add `--market` support while querying insider tradings:SZM-深圳主板, SZGEM-深圳创业板, SZSME-深圳中小板, SHM-上海主板.
 - Add `-i --top-buy` param to query top buy value of insider tradings, time span support: 1m~12m.
 - Add `-i --top-sell` param to query top sell value of insider tradings, time span support: 1m~12m.
+- Add grunt task for image optimization.
 
 ### v0.2.8
 

@@ -21,12 +21,26 @@ module.exports = function(grunt) {
           src: ['Gruntfile.js', 'star.js', 'lib/**/*.js', '!node_modules/**/*.js']
         }
       }
+    },
+    imageoptim: {
+      options: {
+        quitAfter: true
+      },
+      snapshot: {
+        options: {
+          imageAlpha : true,
+          jpegMini   : false
+        },
+        src: ['snapshot/']
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-eslint');
+  grunt.loadNpmTasks('grunt-imageoptim');
 
   grunt.registerTask('check'  , ['eslint']);
+  grunt.registerTask('opt'    , ['imageoptim']);
   grunt.registerTask('default', ['eslint']);
 
 };
