@@ -186,5 +186,8 @@ watchList:
 5. 批量查询股票董监高增减持信息
 ![](https://github.com/hustcer/star/blob/master/snapshot/insider.png)
 
-6. 中国股市未来30日题材前瞻
+6. 董监高增减持排行榜
+![](https://github.com/hustcer/star/blob/master/snapshot/topBuy.png)
+
+7. 中国股市未来30日题材前瞻
 ![](https://github.com/hustcer/star/blob/master/snapshot/cal.png)
