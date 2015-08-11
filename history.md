@@ -11,6 +11,7 @@
 - Add `-i --top-buy` param to query top buy value of insider tradings, time span support: 1m~12m.
 - Add `-i --top-sell` param to query top sell value of insider tradings, time span support: 1m~12m.
 - Add grunt task for image optimization.
+- Update node.js module:async,blessed,grunt-eslint,iconv.
 
 ### v0.2.8
 
