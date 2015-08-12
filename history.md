@@ -1,6 +1,10 @@
 
 ## Change History
 
+### v0.3.1
+
+- Fix pagination bugs for insider trading query with specified security code.
+
 ### v0.3.0
 
 - Fix Insider trading query paging bug.
