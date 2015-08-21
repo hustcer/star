@@ -4,6 +4,7 @@
 ### v0.3.1
 
 - Fix pagination bugs for insider trading query with specified security code.
+- Update node module request to 2.61.0.
 
 ### v0.3.0
 

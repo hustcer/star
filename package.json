@@ -48,7 +48,7 @@
     "moment": "~2.10.6",
     "numeral": "~1.5.3",
     "printf": "~0.2.3",
-    "request": "2.60.0"
+    "request": "2.61.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
