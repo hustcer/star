@@ -5,6 +5,7 @@
 
 - Fix pagination bugs for insider trading query with specified security code.
 - Update node module request to 2.61.0.
+- Add grep from security code feature in stock trace.
 
 ### v0.3.0
 
