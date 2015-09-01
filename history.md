@@ -1,6 +1,11 @@
 
 ## Change History
 
+### v0.3.2
+
+- Add float number support for star.
+- Update node.js module: js-yaml.
+
 ### v0.3.1
 
 - Fix pagination bugs for insider trading query with specified security code.

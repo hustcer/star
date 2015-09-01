@@ -43,7 +43,7 @@
     "colors": "~1.1.0",
     "commander": "~2.8.1",
     "iconv": "^2.1.10",
-    "js-yaml": "~3.3.0",
+    "js-yaml": "~3.4.0",
     "lodash": "~3.10.1",
     "moment": "~2.10.6",
     "numeral": "~1.5.3",
