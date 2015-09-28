@@ -48,6 +48,7 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 
 变更详情 [**见此**](history.md)，主要变更如下：
 
+- 【v0.3.2】 股票追踪增加对融资融券标的的过滤支持，可以通过`-M`或者`--margin`实现；
 - 【v0.3.1】 修复深市股票董监高持股变动查询时的分页显示问题；
 - 【v0.3.1】 `-g`或`--grep`参数支持对股票代码的过滤；
 - 【v0.3.0】 通过`-i`或`--insider`参数查询董监高持股变化信息的时候也可以不指定股票代码，此时查询沪深两市最近的董监高交易记录，按交易时间倒序排列；
@@ -86,6 +87,7 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 - 可以通过`-G`或`--gte`参数过滤出当前价到目标价的上涨空间百分比大于等于指定百分比的股票；
 - 可以通过`-U`或`--under`参数过滤出股票星级等于或在指定星级之下的股票；
 - 可以通过`-A`或`--above`参数过滤出股票星级等于或在指定星级之上的股票；
+- 可以通过`-M`或`--margin`参数过滤出支持融资融券的股票；
 - 可以通过`--lteb [pct]`参数用于筛选出使得如下条件成立的股票：`100*(s.price - s.cheap)/s.price <= pct`，如果`pct`为空则上述条件退化为：`s.price <= s.cheap`，其中`s.price`为股票当前价格，之所以使用`s.price`作为分母而不是`s.cheap`主要是为了减少因为后者的随意性而带来的偏差；
 - 可以通过`--gtes [pct]`参数用于筛选出使得如下条件成立的股票：`100*(s.price - s.expensive)/s.price >= pct`，如果`pct`为空则上述条件退化为：`s.price >= s.expensive`，其中`s.price`为股票当前价格，之所以使用`s.price`作为分母而不是`s.expensive`主要是为了减少因为后者的随意性而带来的偏差；
 

@@ -39,6 +39,7 @@ cmd
   .description('Star is a command line tool for STock Analysis and Research.')
   .option('-a, --all'          , 'display all stocks.')
   .option('-o, --hold'         , 'display all held stocks.')
+  .option('-M, --margin'       , 'display stocks that support Margin.')
   .option('-C, --cal'          , 'display finance calendar of the future month.')
   .option('-I, --ignore'       , 'display all ignored stocks.')
   .option('-i, --insider [c]'  , 'display insider trading records of specified stocks. data source: sse or szse')
