@@ -7,6 +7,7 @@
 - Update node.js module: js-yaml.
 - Fix #41:Add filter margin symbols support.
 - Update node modules:bluebird, iconv and request.
+- Update node modules:bluebird, commander, js-yaml, blessed-contrib and request.
 
 ### v0.3.1
 
