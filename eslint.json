@@ -14,6 +14,7 @@
         "new-parens": 1,
         "key-spacing": 0,
         "dot-notation": 0,
+        "comma-dangle": 2,
         "comma-spacing": 0,
         "no-unused-vars": 1,
         "no-path-concat": 1,

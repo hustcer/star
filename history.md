@@ -8,6 +8,7 @@
 - Fix #41:Add filter margin symbols support.
 - Update node modules:bluebird, iconv and request.
 - Update node modules:bluebird, commander, js-yaml, blessed-contrib and request.
+- Add gulp building tasks.
 
 ### v0.3.1
 
