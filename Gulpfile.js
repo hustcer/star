@@ -5,14 +5,14 @@
  * copyright : (c) hustcer
  */
 
-var gulp   = require('gulp'),
-    eslint = require('gulp-eslint'),
+var gulp     = require('gulp'),
+    eslint   = require('gulp-eslint'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant');
 
 gulp.task('check', function () {
 
-    let src = ['Gruntfile.js', 'Gulpfile.js', 'star.js', 'lib/**/*.js', '!node_modules/**/*.js'];
+    let src = ['Gruntfile.js', 'Gulpfile.js', 'star.js', 'lib/**/*.js'];
 
     return gulp .src(src)
                 .pipe(eslint({
