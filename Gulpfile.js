@@ -1,4 +1,5 @@
 'use strict';
+
 /**
  * Gulp file for front-end js check and etc.
  * Date      : 2015/10/21
@@ -15,9 +16,7 @@ gulp.task('check', function () {
     let src = ['Gruntfile.js', 'Gulpfile.js', 'star.js', 'lib/**/*.js'];
 
     return gulp .src(src)
-                .pipe(eslint({
-                        configFile: 'eslint.json'
-                    }))
+                .pipe(eslint({ configFile: 'eslint.json' }))
                 .pipe(eslint.format('stylish'));
 });
 
