@@ -35,7 +35,7 @@
     "insider trading"
   ],
   "dependencies": {
-    "async": "~1.4.2",
+    "async": "~1.5.0",
     "bluebird": "~2.10.2",
     "blessed": "~0.1.80",
     "blessed-contrib": "~2.4.1",
