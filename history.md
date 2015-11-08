@@ -10,6 +10,7 @@
 - Update node modules:bluebird, commander, js-yaml, blessed-contrib and request.
 - Add gulp building tasks.
 - Update async to v1.5.0.
+- Update blessed-contrib to v2.5.1.
 
 ### v0.3.1
 
