@@ -11,6 +11,7 @@
 - Add gulp building tasks.
 - Update async to v1.5.0.
 - Update blessed-contrib to v2.5.1.
+- Update node modules:blessed-contrib,js-yaml,request.
 
 ### v0.3.1
 
