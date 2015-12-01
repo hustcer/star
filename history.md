@@ -12,6 +12,7 @@
 - Update async to v1.5.0.
 - Update blessed-contrib to v2.5.1.
 - Update node modules:blessed-contrib,js-yaml,request.
+- Use 'SystemDrive' instead of 'USERPROFILE' in `process.env` for windows users to store conf file.
 
 ### v0.3.1
 
