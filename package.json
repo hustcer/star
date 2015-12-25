@@ -20,7 +20,7 @@
     "start": "star.js -h"
   },
   "engines": {
-    "node": ">= 0.12.5"
+    "node": ">= 4.2.0"
   },
   "repository": {
     "type": "git",
