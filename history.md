@@ -1,18 +1,25 @@
 
 ## Change History
 
-### v0.3.2
 
-- Add float number support for star.
-- Update node.js module: js-yaml.
-- Fix #41:Add filter margin symbols support.
-- Update node modules:bluebird, iconv and request.
+### v0.3.3
+
 - Update node modules:bluebird, commander, js-yaml, blessed-contrib and request.
 - Add gulp building tasks.
 - Update async to v1.5.0.
 - Update blessed-contrib to v2.5.1.
 - Update node modules:blessed-contrib,js-yaml,request.
 - Use 'SystemDrive' instead of 'USERPROFILE' in `process.env` for windows users to store conf file.
+- Use template string of ES6 instead of string concat, node.js v4.0.0 or greater required.
+- Update node modules:async, blessed-contrib and moment.
+
+
+### v0.3.2
+
+- Add float number support for star.
+- Update node.js module: js-yaml.
+- Fix #41:Add filter margin symbols support.
+- Update node modules:bluebird, iconv and request.
 
 ### v0.3.1
 
