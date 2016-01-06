@@ -18,7 +18,7 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 
 `Star`是基于`node.js`的所以先要安装`node.js`, 推荐您使用最新版本的`node.js`，同时最好使用 Mac/Linux系统，Windows下目前还没测试过，理论上可以使用，如果具体使用过程中遇到问题也可以[在此反馈](https://github.com/hustcer/star/issues/new)；具体安装步骤如下：
 
-1. 安装 [node.js](https://nodejs.org/), version >= 0.12.5，始终建议您采用最新版本的 `node.js`;
+1. 安装 [node.js](https://nodejs.org/), version >= 4.2.0，始终建议您采用最新版本的 `node.js`;
 1. 安装`star`: `sudo npm i -g star`，注意一定记得加上 `-g` 参数，这样在任意路径下都可以调用`star`命令，否则可能找不到可执行文件;
 1. 运行`star`: 直接执行 `star` 即可，第一次运行的时候需要加`-f`或`--file`参数指定股票数据文件(推荐采用绝对路径,详见后文说明)，之后可以省略该参数;
 1. 更多帮助可以参考: `star --help`;
