@@ -35,17 +35,18 @@
     "insider trading"
   ],
   "dependencies": {
-    "async": "~1.5.1",
-    "bluebird": "~2.10.2",
+    "async": "~1.5.2",
     "blessed": "~0.1.80",
     "blessed-contrib": "~2.5.3",
+    "bluebird": "~2.10.2",
     "cheerio": "~0.19.0",
     "colors": "~1.1.0",
+    "columnify": "^1.5.4",
     "commander": "~2.9.0",
     "iconv": "^2.1.11",
-    "js-yaml": "~3.4.6",
+    "js-yaml": "~3.5.1",
     "lodash": "~3.10.1",
-    "moment": "~2.11.0",
+    "moment": "~2.11.1",
     "numeral": "~1.5.3",
     "printf": "~0.2.3",
     "request": "2.67.0"

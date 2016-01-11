@@ -1,6 +1,10 @@
 
 ## Change History
 
+### v0.3.5
+
+- Update node modules:async, js-yaml and moment.
+- Use columnify to replace printf.
 
 ### v0.3.3
 
