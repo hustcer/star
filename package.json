@@ -2,7 +2,7 @@
   "name": "star",
   "author": "hustcer",
   "public": true,
-  "version": "0.3.3",
+  "version": "0.3.5",
   "license": "MIT",
   "homepage": "http://traceinvest.com",
   "description": "A STock Analysis and Research tool for terminal users.",
