@@ -5,6 +5,7 @@
 
 - Update node modules:async, js-yaml and moment.
 - Use columnify to replace printf.
+- Remove grunt tasks.
 
 ### v0.3.3
 

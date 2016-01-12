@@ -13,7 +13,7 @@ var gulp     = require('gulp'),
 
 gulp.task('check', function () {
 
-    let src = ['Gruntfile.js', 'Gulpfile.js', 'star.js', 'lib/**/*.js'];
+    let src = ['Gulpfile.js', 'star.js', 'lib/**/*.js'];
 
     return gulp .src(src)
                 .pipe(eslint({ configFile: 'eslint.json' }))
