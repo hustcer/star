@@ -45,7 +45,7 @@
     "commander": "~2.9.0",
     "iconv": "^2.1.11",
     "js-yaml": "~3.5.2",
-    "lodash": "~3.10.1",
+    "lodash": "~4.0.0",
     "moment": "~2.11.1",
     "numeral": "~1.5.3",
     "request": "2.67.0"

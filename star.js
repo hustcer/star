@@ -103,7 +103,7 @@ let actions = {
         if(cmd.insider === true){ Insider.queryMiscInsider(); return false; }
 
         let query   = cmd.insider.replace(/，/g, ',');
-        let symbols = _.trimRight(query, ',').split(',');
+        let symbols = _.trimEnd(query, ',').split(',');
         if(symbols.length > conf.chunkSize){
             console.error(('You can query at most ' + conf.chunkSize + ' symbols once.').error);
             return false;
