@@ -3,6 +3,7 @@
 
 ### v0.3.5
 
+- Update lodash to v4.0.0: change _.pluck,_.trimRight,_.trimLeft,_.padRight, etc.
 - Update node modules:async, js-yaml and moment.
 - Use columnify to replace printf.
 - Remove grunt tasks.

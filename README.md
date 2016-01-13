@@ -48,6 +48,7 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 
 变更详情 [**见此**](history.md)，主要变更如下：
 
+- 【v0.3.5】 优化命令行中数据表格展示；
 - 【v0.3.2】 股票追踪增加对融资融券标的的过滤支持，可以通过`-M`或者`--margin`实现；
 - 【v0.3.1】 修复深市股票董监高持股变动查询时的分页显示问题；
 - 【v0.3.1】 `-g`或`--grep`参数支持对股票代码的过滤；

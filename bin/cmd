@@ -51,7 +51,7 @@ let Actions = {
             {name:'恒生电子', code:'600570'},
             {name:'华胜天成', code:'600410'},
         ];
-        Watch.doWatch(_.pluck(watchList, 'code').join(','));
+        Watch.doWatch(_.map(watchList, 'code').join(','));
     },
     'INSIDER' : function(){
         let Insider   = require('../lib/insider.js').Insider;
