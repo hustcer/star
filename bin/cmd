@@ -6,7 +6,7 @@
  * @copyright   TraceInvest.com
  * @create      07/09/2015
  */
-"use strict";
+'use strict';
 
 let _       = require('lodash'),
     colors  = require('colors'),

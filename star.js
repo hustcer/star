@@ -6,7 +6,7 @@
  * @copyright   TraceInvest.com
  * @create      05/18/2015
  */
-"use strict";
+'use strict';
 
 let _       = require('lodash'),
     colors  = require('colors'),
@@ -28,7 +28,7 @@ const COLOR_THEME = {
     data   : 'grey',
     header : 'blue',
     warn   : 'yellow',
-    em     : 'magenta'
+    em     : 'magenta',
 };
 
 colors.setTheme(COLOR_THEME);
@@ -79,19 +79,19 @@ cmd
   .parse(process.argv);
 
 let actions = {
-    'WATCH'  : function(){
+    WATCH: function watch(){
 
         let Watch = require('./lib/watch.js').Watch;
         Watch.doWatch(cmd.watch);
 
     },
-    'CAL' : function(){
+    CAL: function cal(){
 
         let Cal = require('./lib/cal.js').Cal;
         Cal.showCal();
 
     },
-    'INSIDER': function(){
+    INSIDER: function insider(){
 
         let async   = require('async');
         let Insider = require('./lib/insider.js').Insider;
@@ -109,20 +109,20 @@ let actions = {
             return false;
         }
 
-        async.eachSeries(symbols, function(c, callback){
+        async.eachSeries(symbols, (c, callback) => {
             Insider.queryInsider(c, callback);
-        }, function(){
+        }, () => {
             console.log('ALL DONE!');
         });
 
     },
-    'QUERY'  : function(){
+    QUERY: function query(){
 
         let Query = require('./lib/query.js').Query;
         Query.doQuery(cmd.args[0]);
 
     },
-    'TRACE'  : function(){
+    TRACE: function trace(){
 
         let Trace   = require('./lib/trace.js').Trace;
         let symbols = Trace.getFilteredSymbols();
@@ -136,10 +136,10 @@ let actions = {
             .each(syms => Trace.querySymbols(syms))
             .then(()   => Trace.printResults())
             .then(()   => Trace.printSummary());
-    }
+    },
 };
 
-let doCmd = function() {
+let doCmd = function doCmd() {
 
     // 'TRACE' is the default action
     action  = 'TRACE';
@@ -152,7 +152,7 @@ let doCmd = function() {
 
       action = 'QUERY';
 
-    }else if (cmd.args.length > 1) {
+    } else if (cmd.args.length > 1) {
 
       console.error('Input error, please try again, or run "star -h" for more help.'.error);
       return false;
@@ -163,5 +163,4 @@ let doCmd = function() {
 
 // Get the Job Done!
 doCmd();
-
 

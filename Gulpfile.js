@@ -6,12 +6,12 @@
  * copyright : (c) hustcer
  */
 
-var gulp     = require('gulp'),
+let gulp     = require('gulp'),
     eslint   = require('gulp-eslint'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant');
 
-gulp.task('check', function () {
+gulp.task('check',  () => {
 
     let src = ['Gulpfile.js', 'star.js', 'lib/**/*.js'];
 
@@ -20,20 +20,20 @@ gulp.task('check', function () {
                 .pipe(eslint.format('stylish'));
 });
 
-gulp.task('opt', function () {
+gulp.task('opt',  () => {
 
     let imgPath = ['snapshot/*'];
 
     return gulp .src(imgPath)
                 .pipe(imagemin({
                         progressive : true,
-                        use         : [pngquant()]
+                        use         : [pngquant()],
                     }))
                 .pipe(gulp.dest('snapshot/'));
 });
 
 let defaultTasks = ['check', 'opt'];
 
-gulp.task('default', defaultTasks, function() {
+gulp.task('default', defaultTasks, () => {
     console.log(`---------> All gulp task has been done! Task List: ${defaultTasks}`);
 });
