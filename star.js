@@ -35,7 +35,7 @@ colors.setTheme(COLOR_THEME);
 
 cmd
   .version(pkg.version)
-  .usage('[options]' + ' OR'.em + ' star code1,code2，code3...，codeN')
+  .usage(`[options]${' OR'.em} star code1,code2，code3...，codeN`)
   .description('Star is a command line tool for STock Analysis and Research.')
   .option('-a, --all'          , 'display all stocks.')
   .option('-o, --hold'         , 'display all held stocks.')
@@ -44,8 +44,8 @@ cmd
   .option('-I, --ignore'       , 'display all ignored stocks.')
   .option('-i, --insider [c]'  , 'display insider trading records of specified stocks. data source: sse or szse')
   .option('    --code [code]'  , 'specify the stock code of insider tradings you want to query. data source: traceinvest.com')
-  .option('    --market <mkt>' , 'specify the market of insider trading query, case insensitive:SZM-深圳主板, SZGEM-深圳创业板, SZSME-深圳中小板,\n' + ' '.repeat(20) +
-                                 ' SHM-上海主板. multiple market should be separated by "," or "，". ')
+  .option('    --market <mkt>' , (`specify the market of insider trading query, case insensitive:SZM-深圳主板, SZGEM-深圳创业板, SZSME-深圳中小板,
+                     SHM-上海主板. multiple market should be separated by "," or "，". `))
   .option('    --top-buy'      , 'query top buy of insider tradings, should be used with "-i" or "--insider". time span:1m~12m.')
   .option('    --top-sell'     , 'query top sell of insider tradings, should be used with "-i" or "--insider". time span:1m~12m.')
   .option('    --latest-sz'    , 'query latest insider tradings of ShenZhen market, should be used with "-i" or "--insider". data source: szse')
@@ -67,15 +67,16 @@ cmd
   .option('--lteb [pct]'       , "filter the symbols whose current price is lower than or equal to it's buy/cheap price", parseInt)
   .option('--gtes [pct]'       , "filter the symbols whose current price is greater than or equal to it's sell/expensive price", parseInt)
   .option('-g, --grep  <kw>  ' , 'specify the keyword to grep in name or comment, multiple keywords should be separated by ",".')
-  .option('--remove  <kw>    ' , 'remove the symbols from result with the specified keywords in name or comment, multiple keywords should be separated by ",".')
-  .option('-e, --exclude <pre>', 'exclude stocks whose code number begin with: 300,600,002 or 000, etc. multiple prefixs can be\n' + ' '.repeat(20) +
-                                 ' used and should be separated by "," or "，". ')
-  .option('-c, --contain <pre>', 'display stocks whose code number begin with: 300,600,002 or 000, etc. multiple prefixs can be\n' + ' '.repeat(20) +
-                                 ' used and should be separated by "," or "，". ')
-  .option('-s, --sort <sort>'  , 'specify sorting field, could be sorted by: code/star/price/targetp/incp/bdiff/sdiff/capacity/\n' + ' '.repeat(20) +
-                                 ' pe/pb to sort stocks by code, star, price, price to target percent, price increase percent, \n' + ' '.repeat(20) +
-                                 ' (s.price - s.cheap)/s.price, (s.price - s.expensive)/s.price, capacity, PE and PB separately.\n' + ' '.repeat(20) +
-                                 ' and sort by capacity/pe/pb only works while using tencent data source.')
+  .option('--remove  <kw>    ' , (`remove the symbols from result with the specified keywords in name or comment, multiple keywords
+                     should be separated by ",".`))
+  .option('-e, --exclude <pre>', (`exclude stocks whose code number begin with: 300,600,002 or 000, etc. multiple prefixs can be
+                     used and should be separated by "," or "，". `))
+  .option('-c, --contain <pre>', `display stocks whose code number begin with: 300,600,002 or 000, etc. multiple prefixs can be
+                     used and should be separated by "," or "，". `)
+  .option('-s, --sort <sort>'  , (`specify sorting field, could be sorted by: code/star/price/targetp/incp/bdiff/sdiff/capacity/
+                     pe/pb to sort stocks by code, star, price, price to target percent, price increase percent,
+                     (s.price - s.cheap)/s.price, (s.price - s.expensive)/s.price, capacity, PE and PB separately.
+                     and sort by capacity/pe/pb only works while using tencent data source.`))
   .parse(process.argv);
 
 let actions = {
@@ -105,7 +106,7 @@ let actions = {
         let query   = cmd.insider.replace(/，/g, ',');
         let symbols = _.trimEnd(query, ',').split(',');
         if(symbols.length > conf.chunkSize){
-            console.error(('You can query at most ' + conf.chunkSize + ' symbols once.').error);
+            console.error((`You can query at most ${conf.chunkSize} symbols once.`).error);
             return false;
         }
 
@@ -114,6 +115,7 @@ let actions = {
         }, () => {
             console.log('ALL DONE!');
         });
+        return false;
 
     },
     QUERY: function query(){
@@ -136,6 +138,8 @@ let actions = {
             .each(syms => Trace.querySymbols(syms))
             .then(()   => Trace.printResults())
             .then(()   => Trace.printSummary());
+
+        return false;
     },
 };
 
@@ -159,6 +163,7 @@ let doCmd = function doCmd() {
     }
 
     actions[action]();
+    return false;
 };
 
 // Get the Job Done!

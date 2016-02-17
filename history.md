@@ -8,6 +8,8 @@
 - Update node modules:async, js-yaml and moment.
 - Use columnify to replace printf.
 - Remove grunt tasks.
+- Update node modules:cheerio,js-yaml,lodash,moment,request and bluebird.
+- Fix eslint check warnings.
 
 ### v0.3.3
 
