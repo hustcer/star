@@ -13,6 +13,7 @@ Support this project and [others by hustcer][gratipay] via [gratipay][].
 [gratipay-badge]: https://raw.githubusercontent.com/hustcer/htmldemo/master/gittip.png
 [gratipay]: https://gratipay.com/hustcer/
 
+Follow: [![Weibo Follow](http://img.t.sinajs.cn/t6/style/images/global_nav/WB_logo.png = 80x27)](http://www.weibo.com/hustcer)
 
 ## 安装及使用
 
