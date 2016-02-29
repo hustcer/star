@@ -15,21 +15,21 @@ gulp.task('check',  () => {
 
     let src = ['Gulpfile.js', 'star.js', 'lib/**/*.js'];
 
-    return gulp .src(src)
-                .pipe(eslint({ configFile: 'eslint.json' }))
-                .pipe(eslint.format('stylish'));
+    return gulp.src(src)
+               .pipe(eslint({ configFile: 'eslint.json' }))
+               .pipe(eslint.format('stylish'));
 });
 
 gulp.task('opt',  () => {
 
     let imgPath = ['snapshot/*'];
 
-    return gulp .src(imgPath)
-                .pipe(imagemin({
-                        progressive : true,
-                        use         : [pngquant()],
-                    }))
-                .pipe(gulp.dest('snapshot/'));
+    return gulp.src(imgPath)
+               .pipe(imagemin({
+                       progressive : true,
+                       use         : [pngquant()],
+                   }))
+               .pipe(gulp.dest('snapshot/'));
 });
 
 let defaultTasks = ['check', 'opt'];

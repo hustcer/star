@@ -10,6 +10,7 @@
 - Remove grunt tasks.
 - Update node modules:cheerio,js-yaml,lodash,moment,request and bluebird.
 - Fix eslint check warnings.
+- Update node modules:blessed-contrib,bluebird,imagemin-pngquant and lodash.
 
 ### v0.3.3
 
