@@ -12,6 +12,7 @@
 - Fix eslint check warnings.
 - Update node modules:blessed-contrib,bluebird,imagemin-pngquant and lodash.
 - Update node modules:bluebird, js-yaml and moment.
+- Update node modules:lodash,request and blessed-contrib.
 
 ### v0.3.3
 
