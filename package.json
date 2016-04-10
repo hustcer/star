@@ -35,7 +35,7 @@
     "insider trading"
   ],
   "dependencies": {
-    "async": "~1.5.2",
+    "async": "~2.0.0-rc.3",
     "blessed": "~0.1.80",
     "blessed-contrib": "~3.5.5",
     "bluebird": "~3.3.4",
@@ -45,7 +45,7 @@
     "commander": "~2.9.0",
     "iconv": "^2.1.11",
     "js-yaml": "~3.5.5",
-    "lodash": "~4.8.2",
+    "lodash": "~4.9.0",
     "moment": "~2.12.0",
     "numeral": "~1.5.3",
     "request": "2.70.0"

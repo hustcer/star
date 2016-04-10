@@ -13,6 +13,8 @@
 - Update node modules:blessed-contrib,bluebird,imagemin-pngquant and lodash.
 - Update node modules:bluebird, js-yaml and moment.
 - Update node modules:lodash,request and blessed-contrib.
+- Update node modules:lodash,async.
+- Add quotes begin with `001` to SZ market.
 
 ### v0.3.3
 
