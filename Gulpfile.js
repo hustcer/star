@@ -1,4 +1,4 @@
-'use strict';
+'use strict';      // eslint-disable-line
 
 /**
  * Gulp file for front-end js check and etc.
