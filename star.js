@@ -14,7 +14,7 @@ let _       = require('lodash'),
     cmd     = require('commander');
 
 const pkg   = require('./package.json');
-let   conf  = require('./lib/conf.js').conf;
+let   conf  = require('./lib/conf').conf;
 let action  = null;   // cmd action
 
 /**
@@ -82,20 +82,20 @@ cmd
 let actions = {
     WATCH: function watch(){
 
-        let Watch = require('./lib/watch.js').Watch;
+        let Watch = require('./lib/watch').Watch;
         Watch.doWatch(cmd.watch);
 
     },
     CAL: function cal(){
 
-        let Cal = require('./lib/cal.js').Cal;
+        let Cal = require('./lib/cal').Cal;
         Cal.showCal();
 
     },
     INSIDER: function insider(){
 
         let async   = require('async');
-        let Insider = require('./lib/insider.js').Insider;
+        let Insider = require('./lib/insider').Insider;
 
         if(cmd.latestSz){ Insider.querySZLatest();    return false; }
         if(cmd.latestSh){ Insider.querySHLatest();    return false; }
@@ -120,13 +120,13 @@ let actions = {
     },
     QUERY: function query(){
 
-        let Query = require('./lib/query.js').Query;
+        let Query = require('./lib/query').Query;
         Query.doQuery(cmd.args[0]);
 
     },
     TRACE: function trace(){
 
-        let Trace   = require('./lib/trace.js').Trace;
+        let Trace   = require('./lib/trace').Trace;
         let symbols = Trace.getFilteredSymbols();
 
         if(!symbols){ return false; }
