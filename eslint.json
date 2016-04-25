@@ -8,6 +8,7 @@
         "star" : true
     },
     "rules": {
+        "strict": 0,
         "indent": 0,
         "one-var": 0,
         "max-len": 0,
@@ -17,6 +18,7 @@
         "prefer-const": 0,
         "padded-blocks": 0,
         "comma-spacing": 0,
+        "global-require": 0,
         "no-multi-spaces": 0,
         "keyword-spacing": 0,
         "space-infix-ops": 0,
