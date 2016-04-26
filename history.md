@@ -1,6 +1,17 @@
 
 ## Change History
 
+### v0.3.6
+
+- Add insider trading query support for quotes start with `001`.
+- Fix finance calendar: remove redundant spaces, etc.
+- Add quotes begin with `001` to SZ market.
+- Update node modules:lodash,request and blessed-contrib.
+- Fix eslint checking warnings.
+- Update node modules:bluebird, js-yaml and moment.
+- Update node modules:blessed-contrib,bluebird,imagemin-pngquant and lodash.
+- Update node modules:cheerio,js-yaml,lodash,moment,request and bluebird.
+
 ### v0.3.5
 
 - Fix javascript coding style.
