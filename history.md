@@ -1,6 +1,10 @@
 
 ## Change History
 
+### v0.3.7
+
+- Fix SZ market insider trading query for the DOM structure has been changed.
+
 ### v0.3.6
 
 - Add insider trading query support for quotes start with `001`.
