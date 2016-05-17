@@ -4,6 +4,7 @@
 ### v0.3.7
 
 - Fix SZ market insider trading query for the DOM structure has been changed.
+- Update node.js modules: async, eslint, eslint-plugin-import, gulp-imagemin and js-yaml.
 
 ### v0.3.6
 
