@@ -33,6 +33,14 @@ const COLOR_THEME = {
 
 colors.setTheme(COLOR_THEME);
 
+// Fix Issue: https://github.com/tj/commander.js/issues/530
+// For Node v6.0.0 and v6.1.0; TODO: remove it later
+[process.stdout, process.stderr].forEach(stream => {
+  if (stream._handle && typeof stream._handle.setBlocking === 'function') {
+    stream._handle.setBlocking(true);
+  }
+});
+
 cmd
   .version(pkg.version)
   .usage(`[options]${' OR'.em} star code1,code2，code3...，codeN`)
