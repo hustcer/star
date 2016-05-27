@@ -49,6 +49,7 @@ Follow:  <a href="http://www.weibo.com/hustcer"><img src="http://img.t.sinajs.cn
 
 变更详情 [**见此**](history.md)，主要变更如下：
 
+- 【v0.3.8】 修复 node.js V6+ 环境下帮助文档输出被截断的 bug.
 - 【v0.3.5】 优化命令行中数据表格展示；
 - 【v0.3.2】 股票追踪增加对融资融券标的的过滤支持，可以通过`-M`或者`--margin`实现；
 - 【v0.3.1】 修复深市股票董监高持股变动查询时的分页显示问题；

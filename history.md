@@ -1,12 +1,15 @@
 
 ## Change History
 
+### v0.3.8
+
+- Update bluebird and lodash.
+- Fix help content output for node.js V6+;
+
 ### v0.3.7
 
 - Fix SZ market insider trading query for the DOM structure has been changed.
 - Update node.js modules: async, eslint, eslint-plugin-import, gulp-imagemin and js-yaml.
-- Update bluebird and lodash.
-- Fix help content output for node.js V6+;
 
 ### v0.3.6
 
