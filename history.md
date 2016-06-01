@@ -1,6 +1,10 @@
 
 ## Change History
 
+### v0.3.9
+
+- Unescape html entities and collapse whitespace of fin cal by using strman.
+
 ### v0.3.8
 
 - Update bluebird and lodash.
