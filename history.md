@@ -4,6 +4,7 @@
 ### v0.3.9
 
 - Unescape html entities and collapse whitespace of fin cal by using strman.
+- Update eslint and fix eslint check.
 
 ### v0.3.8
 
