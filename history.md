@@ -5,6 +5,7 @@
 
 - Unescape html entities and collapse whitespace of fin cal by using strman.
 - Update eslint and fix eslint check.
+- Update node.js modules:async, eslint and eslint-plugin-import.
 
 ### v0.3.8
 
