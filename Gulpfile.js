@@ -40,7 +40,7 @@ gulp.task('opt',  () => {
                .pipe(gulp.dest('snapshot/'));
 });
 
-let defaultTasks = ['check', 'opt'];
+let defaultTasks = ['check', 'opt', 'sloc'];
 
 gulp.task('default', defaultTasks, () => {
     console.log(`---------> All gulp task has been done! Task List: ${defaultTasks}`);
