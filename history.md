@@ -9,6 +9,7 @@
 - Update node modules:bluebird, iconv and strman.
 - Update node modules: strman, eslint, eslint-plugin-import and gulp-eslint.
 - Add `sloc` counter task for gulp.
+- Use numbro instead of numeral.
 
 ### v0.3.8
 
