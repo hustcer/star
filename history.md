@@ -8,6 +8,7 @@
 - Update node.js modules:async, eslint and eslint-plugin-import.
 - Update node modules:bluebird, iconv and strman.
 - Update node modules: strman, eslint, eslint-plugin-import and gulp-eslint.
+- Add `sloc` counter task for gulp.
 
 ### v0.3.8
 

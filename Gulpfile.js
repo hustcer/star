@@ -7,6 +7,7 @@
  */
 
 let gulp     = require('gulp'),
+    sloc     = require('gulp-sloc2'),
     eslint   = require('gulp-eslint'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant');
@@ -18,6 +19,13 @@ gulp.task('check',  () => {
     return gulp.src(src)
                .pipe(eslint({ configFile: 'eslint.json' }))
                .pipe(eslint.format('stylish'));
+});
+
+gulp.task('sloc', () => {
+
+    let src = ['Gulpfile.js', 'star.js', 'lib/**/*.js'];
+
+    gulp.src(src).pipe(sloc());
 });
 
 gulp.task('opt',  () => {

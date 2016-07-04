@@ -58,6 +58,7 @@
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.0",
     "gulp-imagemin": "^3.0.1",
+    "gulp-sloc2": "^1.0.1",
     "imagemin-pngquant": "^5.0.0"
   }
 }
