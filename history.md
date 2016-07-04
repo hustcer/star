@@ -7,6 +7,7 @@
 - Update eslint and fix eslint check.
 - Update node.js modules:async, eslint and eslint-plugin-import.
 - Update node modules:bluebird, iconv and strman.
+- Update node modules: strman, eslint, eslint-plugin-import and gulp-eslint.
 
 ### v0.3.8
 
