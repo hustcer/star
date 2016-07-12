@@ -10,6 +10,7 @@
 - Update node modules: strman, eslint, eslint-plugin-import and gulp-eslint.
 - Add `sloc` counter task for gulp.
 - Use numbro instead of numeral.
+- Update node modules: moment, request and strman.
 
 ### v0.3.8
 
