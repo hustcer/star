@@ -11,6 +11,7 @@
 - Add `sloc` counter task for gulp.
 - Use numbro instead of numeral.
 - Update node modules: moment, request and strman.
+- Update node modules: async, eslint-plugin-import and eslint.
 
 ### v0.3.8
 
