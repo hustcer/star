@@ -12,6 +12,7 @@
 - Use numbro instead of numeral.
 - Update node modules: moment, request and strman.
 - Update node modules: async, eslint-plugin-import and eslint.
+- Update node modules: async, lodash, numbro and request.
 
 ### v0.3.8
 
