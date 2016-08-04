@@ -13,6 +13,8 @@
 - Update node modules: moment, request and strman.
 - Update node modules: async, eslint-plugin-import and eslint.
 - Update node modules: async, lodash, numbro and request.
+- Update node modules: lodash, eslint-plugin-import, eslint-config-airbnb and eslint.
+- Fix eslint check issues.
 
 ### v0.3.8
 
