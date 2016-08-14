@@ -15,6 +15,7 @@
 - Update node modules: async, lodash, numbro and request.
 - Update node modules: lodash, eslint-plugin-import, eslint-config-airbnb and eslint.
 - Fix eslint check issues.
+- Update node modules: lodash, gulp-imagemin, eslint-plugin-import, eslint-config-airbnb and eslint.
 
 ### v0.3.8
 
