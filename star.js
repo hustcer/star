@@ -6,6 +6,7 @@
  * @copyright   TraceInvest.com
  * @create      05/18/2015
  */
+
 'use strict';
 
 let _       = require('lodash'),

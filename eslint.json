@@ -16,6 +16,7 @@
         "brace-style": 0,
         "key-spacing": 0,
         "prefer-const": 0,
+        "arrow-parens": 0,
         "padded-blocks": 0,
         "comma-spacing": 0,
         "global-require": 0,
