@@ -17,6 +17,7 @@
 - Fix eslint check issues.
 - Update node modules: lodash, gulp-imagemin, eslint-plugin-import, eslint-config-airbnb and eslint.
 - Update numbro, bluebird, cheerio and eslint.
+- Update bluebird, lodash, moment and request.
 
 ### v0.3.8
 
