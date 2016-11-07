@@ -3,7 +3,7 @@
 /**
  * @author      hustcer
  * @license     MIT
- * @copyright   TraceInvest.com
+ * @copyright   uzfin.com
  * @create      05/18/2015
  */
 
@@ -51,7 +51,7 @@ cmd
   .option('-C, --cal'          , 'display finance calendar of the future month.')
   .option('-I, --ignore'       , 'display all ignored stocks.')
   .option('-i, --insider [c]'  , 'display insider trading records of specified stocks. data source: sse or szse')
-  .option('    --code [code]'  , 'specify the stock code of insider tradings you want to query. data source: traceinvest.com')
+  .option('    --code [code]'  , 'specify the stock code of insider tradings you want to query. data source: uzfin.com')
   .option('    --market <mkt>' , (`specify the market of insider trading query, case insensitive:SZM-深圳主板, SZGEM-深圳创业板, SZSME-深圳中小板,
                      SHM-上海主板. multiple market should be separated by "," or "，". `))
   .option('    --top-buy'      , 'query top buy of insider tradings, should be used with "-i" or "--insider". time span:1m~12m.')
