@@ -4,16 +4,11 @@
 `Star`是 STock Analysis and Research tool 的简称，主要用于A股股票追踪分析。`star`目前的主要作用是根据您所设定的股票目标价及当前价计算出相对该**目标价**的上涨空间，即`(目标价-当前价)/当前价x100%`，然后将此上涨空间按顺序排列方便您从中找到上涨空间最大的股票作为买入参考。`star`不提供股价预测和股票交易服务，目前只是单纯的计算，所以它的价值很大程度上取决于您所设定的目标价的有效性，目标价可以选择近期股票的最高价格或者分析师给出的价格，在大牛市里面这样的目标价还是比较容易达到的。同时`star`还具有股票基本报价信息查询、看盘、股票董监高持股信息批量查询、查阅未来30日财经日历等功能，未来可能会加入更多功能，也欢迎大家[反馈建议](https://github.com/hustcer/star/issues/new)。
 
 
-## Donating
+## Donate
 
-Support this project and [others by hustcer][gratipay] via [gratipay][].
+这个工具的开发和维护花费了我大量的时间和精力，如果`Star`对你有所帮助，也欢迎您给于支持，谢谢：
+![赞助Star](https://uzfin.com/static/images/backing.jpg "赞助Star")
 
-[![Support via Gratipay][gratipay-badge]][gratipay]
-
-[gratipay-badge]: https://raw.githubusercontent.com/hustcer/htmldemo/master/gittip.png
-[gratipay]: https://gratipay.com/hustcer/
-
-Follow:  <a href="http://www.weibo.com/hustcer"><img src="http://img.t.sinajs.cn/t6/style/images/global_nav/WB_logo.png" height="20" width="70" vertical-align="top" ></a>
 
 ## 安装及使用
 
