@@ -6,7 +6,7 @@
 
 ## Donate
 
-这个工具的开发和维护花费了我大量的时间和精力，如果`Star`对你有所帮助，也欢迎您给于支持，谢谢：
+这个工具的开发和维护花费了我大量的时间和精力，如果`Star`对你有所帮助，也欢迎您给予支持，谢谢：
 ![赞助Star](https://uzfin.com/static/images/backing.jpg "赞助Star")
 
 

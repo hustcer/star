@@ -3,6 +3,7 @@
 
 ### v0.3.9
 
+- Update node modules:async,blessed-contrib,lodash,moment and request.
 - Unescape html entities and collapse whitespace of fin cal by using strman.
 - Update eslint and fix eslint check.
 - Update node.js modules:async, eslint and eslint-plugin-import.
