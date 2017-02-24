@@ -3,6 +3,7 @@
 
 ### v0.3.9
 
+- Update node modules: async, blessed-contrib, js-yaml, lodash and eslint.
 - Update node modules: async, bluebird, moment, eslint and blessed-contrib.
 - Update node modules: eslint,eslint-plugin-import,eslint-config-airbnb,js-yaml,lodash,moment and request.
 - Update node modules:async,blessed-contrib,lodash,moment and request.
