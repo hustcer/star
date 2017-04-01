@@ -35,7 +35,7 @@
     "insider trading"
   ],
   "dependencies": {
-    "async": "^2.1.5",
+    "async": "^2.2.0",
     "blessed": "~0.1.80",
     "blessed-contrib": "^4.7.5",
     "bluebird": "^3.5.0",
@@ -46,18 +46,18 @@
     "iconv": "^2.2.1",
     "js-yaml": "^3.8.2",
     "lodash": "^4.17.4",
-    "moment": "^2.17.1",
-    "numbro": "^1.9.3",
-    "request": "^2.80.0",
-    "strman": "^1.3.1"
+    "moment": "^2.18.1",
+    "numbro": "^1.10.1",
+    "request": "^2.81.0",
+    "strman": "^2.0.0"
   },
   "devDependencies": {
-    "eslint": "^3.17.1",
+    "eslint": "^3.19.0",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-plugin-import": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
-    "gulp-imagemin": "^3.1.1",
+    "gulp-imagemin": "^3.2.0",
     "gulp-sloc2": "^1.0.1",
     "imagemin-pngquant": "^5.0.0"
   }
