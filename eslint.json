@@ -30,6 +30,8 @@
         "space-before-blocks": 0,
         "object-curly-spacing": 0,
         "space-after-keywords": 0,
+        "prefer-destructuring": 0,
+        "function-paren-newline": 0,
         "object-property-newline": 0,
         "no-multiple-empty-lines": 0,
         "newline-per-chained-call": 0,
