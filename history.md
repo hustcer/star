@@ -1,6 +1,12 @@
 
 ## Change History
 
+### v0.5.0
+
+- Update node modules.
+- fix: Fix SZ market insider trading query.
+- fix: Fix finance calendar query.
+
 ### v0.3.9
 
 - Update node modules: async, blessed-contrib, js-yaml, lodash and eslint.
