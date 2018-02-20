@@ -2,7 +2,7 @@
   "name": "star",
   "author": "hustcer",
   "public": true,
-  "version": "0.3.9",
+  "version": "0.5.0",
   "license": "MIT",
   "homepage": "http://uzfin.com",
   "description": "A STock Analysis and Research tool for terminal users.",
