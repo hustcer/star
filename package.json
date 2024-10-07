@@ -35,30 +35,30 @@
     "insider trading"
   ],
   "dependencies": {
-    "async": "^2.6.0",
-    "blessed": "~0.1.80",
-    "blessed-contrib": "^4.7.5",
-    "bluebird": "^3.5.1",
-    "cheerio": "~1.0.0-rc.2",
-    "colors": "~1.1.0",
-    "columnify": "^1.5.4",
-    "commander": "~2.14.1",
-    "iconv": "^2.2.3",
-    "js-yaml": "^3.10.0",
-    "lodash": "^4.17.5",
-    "moment": "^2.20.1",
-    "numbro": "^1.11.1",
-    "request": "^2.83.0",
-    "strman": "^2.0.0"
+    "async": "^2.6.4",
+    "blessed": "~0.1.81",
+    "blessed-contrib": "^4.11.0",
+    "bluebird": "^3.7.2",
+    "cheerio": "~1.0.0",
+    "colors": "~1.1.2",
+    "columnify": "^1.6.0",
+    "commander": "~12.1.0",
+    "iconv": "^3.0.1",
+    "js-yaml": "^3.14.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1",
+    "numbro": "^2.5.0",
+    "request": "^2.88.2",
+    "strman": "^2.0.1"
   },
   "devDependencies": {
-    "eslint": "^4.18.0",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.8.0",
-    "gulp": "^3.9.1",
-    "gulp-eslint": "^4.0.2",
-    "gulp-imagemin": "^4.1.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.31.0",
+    "gulp": "^5.0.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-imagemin": "^9.1.0",
     "gulp-sloc2": "^1.0.1",
-    "imagemin-pngquant": "^5.0.0"
+    "imagemin-pngquant": "^5.1.0"
   }
 }

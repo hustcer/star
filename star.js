@@ -11,9 +11,9 @@
 
 let _       = require('lodash'),
     colors  = require('colors'),
-    Promise = require('bluebird'),
-    cmd     = require('commander');
+    Promise = require('bluebird');
 
+const { program: cmd } = require('commander');
 const pkg   = require('./package.json');
 let   conf  = require('./lib/conf').conf;
 let action  = null;   // cmd action
